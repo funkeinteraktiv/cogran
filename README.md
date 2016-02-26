@@ -52,6 +52,7 @@ You can specify these cli options:
 * [ ] Add disaggregation function
 * [ ] Add tests
 * [ ] Find a solution for dealing with percentages and relative values
+* [ ] Add better examples
 
 ### Dependencies
 
