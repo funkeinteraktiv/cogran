@@ -51,6 +51,7 @@ You can specify these cli options:
 * [ ] Add better logging
 * [ ] Add disaggregation function
 * [ ] Add tests
+* [ ] Find a solution for dealing with percentages and relative values
 
 ### Dependencies
 
