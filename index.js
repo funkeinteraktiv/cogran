@@ -37,7 +37,7 @@ let argv = optimist
   })
   .options('t', {
     alias: 'target',
-    describe: 'The path of the target shapefile file',
+    describe: 'The path of the target shapefile',
     demand: true
   })
   .options('o', {
