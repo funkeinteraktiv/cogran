@@ -36,9 +36,9 @@ $ cogran --input test-data/wahl/wahl.shp --target test-data/mieten/mieten.shp --
 
 ### Todos
 
-[ ] Add better logging
-[ ] Add disaggregation function
-[ ] Add tests
+* [ ] Add better logging
+* [ ] Add disaggregation function
+* [ ] Add tests
 
 ### Dependencies
 
