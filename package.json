@@ -1,7 +1,7 @@
 {
   "name": "cogran",
   "version": "1.0.0",
-  "description": "A command line tool for working with geodata.",
+  "description": "A command line tool for working with aggregations.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/berlinermorgenpost/cogran.git"
   },
   "bin": {
-    "cogran": "babel-node ./index.js"
+    "cogran": "./index.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/berlinermorgenpost/cogran#readme",
   "dependencies": {
-    "optimist": "^0.6.1"
+    "optimist": "^0.6.1",
+    "shapefile": "^0.3.1",
+    "shp-write": "^0.2.5",
+    "turf": "^2.0.2"
   }
 }

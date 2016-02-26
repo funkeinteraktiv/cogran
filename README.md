@@ -1,6 +1,6 @@
 # cogran.js
 
-A command line tool for working with geodata.
+A command line tool for working with aggregations.
 
 **Note: Project is under development.**
 
@@ -20,17 +20,25 @@ $ cd /path/to/cogran
 $ npm install
 ```
 
-[ ] TODO: publish to npm later
+Using the link command, we install cogran globally:
+
+```
+$ npm link
+```
 
 ### Usage
 
-**Note: This is not implemented, yet**
-
-Minimal usage for aggregation:
+**Aggregation**
 
 ```
-$ node index.js --input <input_shape.shp> --target <target_shape.shp> --output <output_shape.shp> --attr <attribute_name>
+$ cogran --input test-data/wahl/wahl.shp --target test-data/mieten/mieten.shp --attr "BRFW" --output test-data/output.zip
 ```
+
+### Todos
+
+[ ] Add better logging
+[ ] Add disaggregation function
+[ ] Add tests
 
 ### Dependencies
 
