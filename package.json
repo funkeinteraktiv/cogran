@@ -4,7 +4,7 @@
   "description": "A command line tool for working with aggregations.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   "bin": {
     "cogran": "./index.js"
   },
-  "author": "",
+  "author": "berlinermorgenpost",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/berlinermorgenpost/cogran/issues"
@@ -24,6 +24,10 @@
     "optimist": "^0.6.1",
     "shapefile": "^0.3.1",
     "shp-write": "^0.2.5",
-    "turf": "^2.0.2"
+    "turf": "^2.0.2",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
   }
 }

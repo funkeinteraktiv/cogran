@@ -31,8 +31,17 @@ $ npm link
 **Aggregation**
 
 ```
-$ cogran --aggregate --input test-data/wahl/wahl.shp --target test-data/mieten/mieten.shp --attr "BRFW" --output test-data/output.zip
+$ cogran --aggregate --input test/data/wahl/wahl.shp --target test/data/mieten/mieten.shp --attr "BRFW" --output output.zip
 ```
+
+**Help**
+
+Prints out the available cli options
+
+```
+$ cogran --help
+```
+
 
 ### Options
 
