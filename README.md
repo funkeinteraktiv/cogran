@@ -54,6 +54,8 @@ You can specify these cli options:
 * **--target, -t** - The path of the target shapefile
 * **--output, -o** - The path of the output zip file
 * **--attr** - The attribute that will be used
+* **--verbose** - Maximum log level
+* **--silent** - disable logging
 
 ### Tests
 
