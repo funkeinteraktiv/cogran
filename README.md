@@ -55,11 +55,19 @@ You can specify these cli options:
 * **--output, -o** - The path of the output zip file
 * **--attr** - The attribute that will be used
 
+### Tests
+
+To run tests with mocha:
+
+```
+$ npm test
+```
+
 ### Todos
 
-* [ ] Add better logging
+* [x] Add better logging
 * [ ] Add disaggregation function
-* [ ] Add tests
+* [x] Add tests
 * [ ] Find a solution for dealing with percentages and relative values
 * [ ] Add better examples
 
