@@ -36,10 +36,11 @@ $ cogran --aggregate --input test/data/kriminalitaet/kriminalitaet_Bezirksregion
 
 **Areal Interpolation Example**
 
-```
-$ cogran --disaggregate --input test/data/kriminalitaet/kriminalitaet_Bezirksregionen.shp --target test/data/wahl/wahl.shp --output test/data/output/disagg-test.zip --attr "Alle_2012" --weight "FLAECHE_HA"
-```
+The following example will disaggregate crime data into smaller areas:
 
+```
+$ cogran --disaggregate --input test/data/kriminalitaet/kriminalitaet_wgs84.shp --target test/data/mieten/mieten.shp --output test/data/output/disagg-test.zip --attr "Alle_2012"
+```
 
 **Help**
 
