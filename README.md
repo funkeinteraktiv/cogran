@@ -57,7 +57,7 @@ You can specify these cli options:
 
 * **--aggregate, -a** - Use aggregate mode
 * **--disaggregate, -d** - Use disaggregate mode
-* **--mode, -m** - The mode used for aggregating/disaggregating, can be: min,average,median,min,max,deviation,variance,count (default: median)
+* **--mode, -m** - The mode used for aggregating/disaggregating; aggregation: sum (default),min,average,median,min,max,deviation,variance,count; disaggregation: arealInterpolation (default)
 * **--input, -i** - The input shapefile that will be used for aggregation/disaggregation
 * **--target, -t** - The path of the target shapefile
 * **--output, -o** - The path of the output zip file

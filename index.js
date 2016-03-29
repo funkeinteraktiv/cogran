@@ -28,8 +28,7 @@ let argv = Optimist
   })
   .options('m', {
     alias: 'mode',
-    describe: 'The mode used for aggregating/disaggregating, can be: sum,min,average,median,min,max,deviation,variance,count',
-    default: 'sum'
+    describe: 'The mode used for aggregating/disaggregating, \n aggregation: sum (default),min,average,median,min,max,deviation,variance,count \n disaggregation: arealInterpolation (default)'
   })
   .options('i', {
     alias: 'input',
