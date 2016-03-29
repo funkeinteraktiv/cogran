@@ -28,11 +28,18 @@ $ npm link
 
 ### Usage
 
-**Aggregation**
+**Aggregation Example**
 
 ```
-$ cogran --aggregate --input test/data/wahl/wahl.shp --target test/data/mieten/mieten.shp --attr "BRFW" --output output.zip
+$ cogran --aggregate --input test/data/kriminalitaet/kriminalitaet_Bezirksregionen.shp --target test/data/bezirke/RBS_OD_BEZ_1412.shp --output test/data/output/agg-test.zip --attr "Alle_2012" -m sum
 ```
+
+**Areal Interpolation Example**
+
+```
+$ cogran --disaggregate --input test/data/kriminalitaet/kriminalitaet_Bezirksregionen.shp --target test/data/wahl/wahl.shp --output test/data/output/disagg-test.zip --attr "Alle_2012" --weight "FLAECHE_HA"
+```
+
 
 **Help**
 
@@ -54,6 +61,7 @@ You can specify these cli options:
 * **--target, -t** - The path of the target shapefile
 * **--output, -o** - The path of the output zip file
 * **--attr** - The attribute that will be used
+* **--weight** - The attribute that is used for weighting (only for disaggregation)
 * **--verbose** - Maximum log level
 * **--silent** - disable logging
 

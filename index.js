@@ -8,14 +8,15 @@
 * index.js
 * The entry point of the application. Parses user arguments and executes the desired code.
 */
-let optimist = require('optimist');
-let aggregate = require('./lib/aggregate');
-let fileWriter = require('./lib/filewriter');
-let pckg = require('./package.json');
-let errors = require('./lib/errors');
-let logger = require('./lib/logger');
+const Optimist = require('optimist');
+const Aggregate = require('./lib/aggregate');
+const ArealInterpolate = require('./lib/areal-interpolate');
+const FileWriter = require('./lib/filewriter');
+const Pckg = require('./package.json');
+const Errors = require('./lib/errors');
+const Logger = require('./lib/logger');
 
-let argv = optimist
+let argv = Optimist
   .usage('Usage: cogran --aggregate --input <input_shape.shp> --target <target_shape.shp> --output <output_shape.shp> --attr <attribute_name>')
   .options('a', {
     alias: 'aggregate',
@@ -58,21 +59,28 @@ let argv = optimist
   .argv;
 
 function main(argv) {
-  if(argv.help) return optimist.showHelp();
-  if(argv.version) return logger.log(pckg.version);
+  if(argv.help) return Optimist.showHelp();
+  if(argv.version) return logger.log(Pckg.version);
   if(argv.aggregate) {
-    return aggregate(argv, (res) => {
+    return Aggregate(argv, res => {
       if(argv.output) {
-        fileWriter.write(res, argv.output); 
+        FileWriter.write(res, argv.output); 
       }
       else {
-        logger.info('no output file specified');
+        Logger.info('no output file specified');
       }
     });
   }
   if(argv.disaggregate) {
-    throw errors.notImplementedYetError
+    return ArealInterpolate(argv, res => {
+      if(argv.output) {
+        FileWriter.write(res, argv.output); 
+      }
+      else {
+        Logger.info('no output file specified');
+      }
+    });
   }
 
-  return optimist.showHelp();
+  return Optimist.showHelp();
 }
