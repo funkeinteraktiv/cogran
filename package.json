@@ -21,7 +21,9 @@
   "homepage": "https://github.com/berlinermorgenpost/cogran#readme",
   "dependencies": {
     "async": "^1.5.2",
+    "lodash": "^4.6.1",
     "optimist": "^0.6.1",
+    "progress": "^1.1.8",
     "shapefile": "^0.3.1",
     "shp-write": "^0.2.5",
     "turf": "^2.0.2",
