@@ -45,7 +45,7 @@ $ cogran --disaggregate --input test/data/kriminalitaet/kriminalitaet_wgs84.shp 
 This example uses *Population Weighting* to disaggregate crime data into smaller areas that have a population attribute:
 
 ```
-$ cogran --disaggregate --input test/data/kriminalitaet/kriminalitaet_wgs84.shp --target test/data/zugezogene_plraeume/zugezogene_Plraeume.shp --output test/data/output/disagg-popweight-test.zip --attr "Alle_2012" --weight "Einwohner" --method populationWeighting
+$ cogran --disaggregate --input test/data/kriminalitaet/kriminalitaet_wgs84.shp --target test/data/zugezogene_plraeume/zugezogene_Plraeume_wgs84.shp --output test/data/output/disagg-popweight-test.zip --attr "Alle_2012" --weight "Einwohner" --mode populationWeighting
 ```
 
 **Help**
