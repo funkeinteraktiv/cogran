@@ -87,6 +87,9 @@ $ npm test
 * [x] Add tests
 * [ ] Find a solution for dealing with percentages and relative values
 * [ ] Add better examples
+* [ ] Number validation improvements
+* [ ] Improve Documentation
+* [ ] "Mode" should be renamed to "Method"
 
 ### Dependencies
 
