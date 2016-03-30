@@ -54,12 +54,15 @@ let argv = Optimist
   .options('silent', {
     describe: 'Don\'t print anything to the console'
   })
+  .options('examples', {
+    describe: 'List some usage examples'
+  })
   .check(main)
   .argv;
 
 function main(argv) {
   if(argv.help) return Optimist.showHelp();
-  if(argv.version) return logger.log(Pckg.version);
+  if(argv.version) return Logger.log(Pckg.version);
   if(argv.aggregate) {
     return Aggregate(argv, res => {
       if(argv.output) {

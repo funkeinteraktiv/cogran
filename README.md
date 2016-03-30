@@ -34,12 +34,18 @@ $ npm link
 $ cogran --aggregate --input test/data/kriminalitaet/kriminalitaet_Bezirksregionen.shp --target test/data/bezirke/RBS_OD_BEZ_1412.shp --output test/data/output/agg-test.zip --attr "Alle_2012" -m sum
 ```
 
-**Areal Interpolation Example**
+**Areal Interpolation Examples**
 
-The following example will disaggregate crime data into smaller areas:
+This example uses *Areal Weighting* to disaggregate crime data into smaller areas:
 
 ```
 $ cogran --disaggregate --input test/data/kriminalitaet/kriminalitaet_wgs84.shp --target test/data/mieten/mieten.shp --output test/data/output/disagg-test.zip --attr "Alle_2012"
+```
+
+This example uses *Population Weighting* to disaggregate crime data into smaller areas that have a population attribute:
+
+```
+$ cogran --disaggregate --input test/data/kriminalitaet/kriminalitaet_wgs84.shp --target test/data/zugezogene_plraeume/zugezogene_Plraeume.shp --output test/data/output/disagg-popweight-test.zip --attr "Alle_2012" --weight "Einwohner" --method populationWeighting
 ```
 
 **Help**
