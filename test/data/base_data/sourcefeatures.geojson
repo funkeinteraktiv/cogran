@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "Aggr": 42.000000, "Aggr_rel": 30, "population": 2000 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 13.32, 52.52 ], [ 13.34, 52.58 ], [ 13.46, 52.54 ], [ 13.41, 52.49 ], [ 13.32, 52.52 ] ] ] } },
+{ "type": "Feature", "properties": { "Aggr": 15.000000, "Aggr_rel": 10, "population": 44500 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 13.34, 52.58 ], [ 13.47, 52.59 ], [ 13.52, 52.55 ], [ 13.46, 52.54 ], [ 13.34, 52.58 ] ] ] } },
+{ "type": "Feature", "properties": { "Aggr": 20.000000, "Aggr_rel": 90, "population": 325 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 13.46, 52.54 ], [ 13.5, 52.49 ], [ 13.41, 52.49 ], [ 13.46, 52.54 ] ] ] } }
+]
+}
