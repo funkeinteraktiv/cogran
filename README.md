@@ -31,7 +31,7 @@ $ npm link
 **Aggregation Example**
 
 ```
-$ cogran --aggregate --input test/data/kriminalitaet/kriminalitaet_Bezirksregionen.shp --target test/data/bezirke/RBS_OD_BEZ_1412.shp --output test/data/output/agg-test.zip --attr "Alle_2012" -m sum
+$ cogran --aggregate -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson  -o test/data/output/output.zip --attr Aggr
 ```
 
 **Areal Interpolation Examples**

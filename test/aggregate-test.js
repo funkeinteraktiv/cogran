@@ -3,23 +3,24 @@
 const Expect = require('expect');
 const Path = require('path');
 const Aggregate = require('../lib/aggregate');
+const FileLoader = require('../lib/fileloader');
 
 const Config = {
   basic: { 
-    input: Path.resolve(__dirname, 'data/base_data/binarymask.geojson'),
-    target: Path.resolve(__dirname, 'data/base_data/binarymask.geojson'),
+    input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
+    target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
     mode: 'sum',
-    attr: 'BRFW'
+    attr: 'Aggr'
   },
 
   missingTarget: {
-    input: Path.resolve(__dirname, 'data/base_data/binarymask.geojson'),
+    input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
   },
 
   missingMode: { 
-    input: Path.resolve(__dirname, 'data/base_data/binarymask.geojson'),
-    target: Path.resolve(__dirname, 'data/base_data/binarymask.geojson'),
-    attr: 'BRFW'
+    input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
+    target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
+    attr: 'Aggr'
   }
 }
 
@@ -53,28 +54,42 @@ describe('aggregation module', () => {
   
   });
 
-  // describe('output data', () => {
+  describe('output data', () => {
 
-  //   let inputData, outputData;
+    let inputData, outputData;
 
-  //   beforeEach((cb) => {
+    beforeEach((cb) => {
 
-  //     Aggregate(Config.basic, (res) => {
-  //       outputData = res;
-  //       inputData = require(Config.basic.target);
-  //       cb();
-  //     });
+      Aggregate(Config.basic, (res) => {
+        outputData = res;
+        FileLoader.readGeoJson([Config.basic.target], (err, res) => {
+          inputData = res[0];
+          cb();
+        });
+      });
 
-  //   });
+    });
 
 
-  //   it('should have the same number of features as the target file',() => {
+    it('should have the same number of features as the source file',() => {
 
-  //     Expect(inputData.features.length).toBe(outputData.features.length);
+      Expect(inputData.features.length).toBe(outputData.features.length);
 
-  //   });
+    });
 
-  // });
+    it('should inherit the attribute that is aggregated',() => {
+      
+      Expect(typeof outputData.features[0].properties[Config.basic.attr]).toBe('number');
+
+    });
+
+    it('should calculate the ouput values correctly',() => {
+      
+      Expect(outputData.features[0].properties[Config.basic.attr]).toBe(62);
+
+    });
+
+  });
 
   describe('error handling', () => {
 
