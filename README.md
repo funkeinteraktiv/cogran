@@ -31,7 +31,7 @@ $ npm link
 **Aggregation Example**
 
 ```
-$ cogran --aggregate -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson  -o test/data/output/output.zip --attr Aggr
+$ cogran -a -i test/data/kriminalitaet_plz/kriminalitaet.geo.geojson -t test/data/bezirke/bezirke.geojson -o test/output.geojson --attr Alle_2012
 ```
 
 **Areal Interpolation Examples**
