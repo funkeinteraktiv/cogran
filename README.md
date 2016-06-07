@@ -26,34 +26,38 @@ Using the link command, we install cogran globally:
 $ npm link
 ```
 
-### Usage
+### Usage Examples
 
-**Aggregation Example**
-
-```
-$ cogran -a -i test/data/kriminalitaet_plz/kriminalitaet.geo.geojson -t test/data/bezirke/bezirke.geojson -o test/output.geojson --attr Alle_2012
-```
-
-**Areal Interpolation Examples**
-
-This example uses *Areal Weighting* to disaggregate crime data into smaller areas:
+##### Aggregation Example
 
 ```
-$ cogran --disaggregate --input test/data/kriminalitaet/kriminalitaet_wgs84.shp --target test/data/mieten/mieten.shp --output test/data/output/disagg-test.zip --attr "Alle_2012"
+$ cogran -a -i test/data/base_data/sourcefeatures.geojson -t data/base_data/targetfeatures_hierarchical.geojson -o test/output.geojson --attr Aggr --mode sum
 ```
 
-This example uses *Population Weighting* to disaggregate crime data into smaller areas that have a population attribute:
+##### Areal Interpolation Examples
+
+1. Areal Weighting
 
 ```
-$ cogran --disaggregate --input test/data/kriminalitaet/kriminalitaet_wgs84.shp --target test/data/zugezogene_plraeume/zugezogene_Plraeume_wgs84.shp --output test/data/output/disagg-popweight-test.zip --attr "Alle_2012" --weight "Einwohner" --mode populationWeighting
+$ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr
 ```
 
-**Help**
-
-Prints out the available cli options
+2. Population Weighting
 
 ```
-$ cogran --help
+$ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr --weight population --mode populationWeighting
+```
+
+3. Binary Dasymetric Weighting
+
+```
+$ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr --weight population --mode binaryDasymetricWeighting --binary test/data/base_data/binarymask.geojson
+```
+
+4. N-Class Dasymetric Weighting
+
+```
+$ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr --weight population --mode nClassDasymetricWeighting --binary test/data/base_data/binarymask.geojson
 ```
 
 
