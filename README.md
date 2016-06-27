@@ -1,8 +1,8 @@
 # cogran.js
 
-A command line tool for working with aggregations.
+CoGran - A command line tool for combining data of different spatial granularity
 
-**Note: Project is under development.**
+**Note: Project is still under development.**
 
 
 ### Installation
@@ -34,27 +34,27 @@ $ npm link
 $ cogran -a -i test/data/base_data/sourcefeatures.geojson -t data/base_data/targetfeatures_hierarchical.geojson -o test/output.geojson --attr Aggr --mode sum
 ```
 
-##### Areal Interpolation Examples
+##### Areal Interpolation Example
 
-1. Areal Weighting
+1. Areal Weighting (done)
 
 ```
 $ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr
 ```
 
-2. Population Weighting
+2. Population Weighting (in development)
 
 ```
 $ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr --weight population --mode populationWeighting
 ```
 
-3. Binary Dasymetric Weighting
+3. Binary Dasymetric Weighting (in development)
 
 ```
 $ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr --weight population --mode binaryDasymetricWeighting --binary test/data/base_data/binarymask.geojson
 ```
 
-4. N-Class Dasymetric Weighting
+4. N-Class Dasymetric Weighting (in development)
 
 ```
 $ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr --weight population --mode nClassDasymetricWeighting --binary test/data/base_data/binarymask.geojson
