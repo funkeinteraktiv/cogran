@@ -42,7 +42,7 @@ $ cogran -a -i test/data/base_data/sourcefeatures.geojson -t data/base_data/targ
 $ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr
 ```
 
-2. Population Weighting (in development)
+2. Population Weighting (done)
 
 ```
 $ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr --weight population --mode populationWeighting
@@ -52,7 +52,7 @@ $ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --tar
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr Aggr_rel --weight population --mode populationWeightingRelative -o test.geojson
 ```
 
-3. Binary Dasymetric Weighting (in development)
+3. Binary Dasymetric Weighting (done)
 
 ```
 $ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr --weight population --mode binaryDasymetricWeighting --binary test/data/base_data/binarymask.geojson
