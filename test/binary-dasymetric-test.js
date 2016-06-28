@@ -58,8 +58,8 @@ describe('binary dasymetric weighting [hierarchical, absolute]', () => {
     });
 
     it('should calculate the ouput values correctly',() => {
-      Expect(Math.round(outputData.features[0].properties[Config.hierarch_abs.attr])).toBe(62);
-      Expect(Math.round(outputData.features[1].properties[Config.hierarch_abs.attr])).toBe(15);
+      Expect(Math.round(outputData.features[0].properties[Config.hierarch_abs.attr])).toBe(15);
+      Expect(Math.round(outputData.features[1].properties[Config.hierarch_abs.attr])).toBe(42);
     });
 
   });
@@ -85,8 +85,8 @@ describe('binary dasymetric weighting [hierarchical, relative]', () => {
     });
 
     it('should calculate the ouput values correctly',() => {
-      Expect(outputData.features[0].properties[Config.hierarch_rel.attr]).toBeGreaterThan(30.5).toBeLessThan(30.7);
-      Expect(outputData.features[1].properties[Config.hierarch_rel.attr]).toBeGreaterThan(1.4).toBeLessThan(1.6);
+      Expect(outputData.features[0].properties[Config.hierarch_rel.attr]).toBeGreaterThan(1.4).toBeLessThan(1.6);
+      Expect(outputData.features[1].properties[Config.hierarch_rel.attr]).toBeGreaterThan(12.6).toBeLessThan(12.7);
     });
 
   });
@@ -114,8 +114,8 @@ describe('binary dasymetric weighting [nonhierarchical, absolute]', () => {
     });
 
     it('should calculate the ouput values correctly',() => {
-      Expect(outputData.features[0].properties[Config.nonHierarch_abs.attr]).toBe(42);
-      Expect(outputData.features[1].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(56).toBeLessThan(57);
+      Expect(outputData.features[0].properties[Config.nonHierarch_abs.attr]).toBe(0);
+      Expect(outputData.features[1].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(14.1).toBeLessThan(14.2);
     });
 
   });
@@ -142,8 +142,8 @@ describe('binary dasymetric weighting [nonhierarchical, relative]', () => {
     });
 
     it('should calculate the ouput values correctly',() => {
-      Expect(outputData.features[0].properties[Config.nonHierarch_rel.attr]).toBeGreaterThan(25).toBeLessThan(26);
-      Expect(outputData.features[1].properties[Config.nonHierarch_rel.attr]).toBeGreaterThan(12).toBeLessThan(13);
+      Expect(outputData.features[0].properties[Config.nonHierarch_rel.attr]).toBe(0);
+      Expect(outputData.features[1].properties[Config.nonHierarch_rel.attr]).toBeGreaterThan(3.4).toBeLessThan(3.5);
     });
 
   });

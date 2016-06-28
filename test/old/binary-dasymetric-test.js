@@ -10,36 +10,36 @@ const Config = {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
     attr: 'Aggr',
-    weight: 'population',
-    mode: 'populationWeighting'
+    binary: Path.resolve(__dirname, 'data/base_data/binarymask.geojson'),
+    mode: 'binaryDasymetricWeighting'
   },
   
   hierarch_rel: { 
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
     attr: 'Aggr_rel',
-    weight: 'population',
-    mode: 'populationWeightingRelative'
+    binary: Path.resolve(__dirname, 'data/base_data/binarymask.geojson'),
+    mode: 'binaryDasymetricWeighting'
   },
 
   nonHierarch_abs: { 
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_nonhierarchical.geojson'),
     attr: 'Aggr',
-    weight: 'population',
-    mode: 'populationWeighting'
+    binary: Path.resolve(__dirname, 'data/base_data/binarymask.geojson'),
+    mode: 'binaryDasymetricWeighting'
   },
 
   nonHierarch_rel: { 
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_nonhierarchical.geojson'),
     attr: 'Aggr_rel',
-    weight: 'population',
-    mode: 'populationWeightingRelative'
+    binary: Path.resolve(__dirname, 'data/base_data/binarymask.geojson'),
+    mode: 'binaryDasymetricWeighting'
   }
 }
 
-describe('population weighting [hierarchical, absolute]', () => {
+describe('binary dasymetric weighting [hierarchical, absolute]', () => {
 
   describe('output data', () => {
 
@@ -58,15 +58,15 @@ describe('population weighting [hierarchical, absolute]', () => {
     });
 
     it('should calculate the ouput values correctly',() => {
-      Expect(outputData.features[0].properties[Config.hierarch_abs.attr]).toBeGreaterThan(7.3).toBeLessThan(7.4);
-      Expect(outputData.features[1].properties[Config.hierarch_abs.attr]).toBeGreaterThan(15.8).toBeLessThan(15.9);
+      Expect(Math.round(outputData.features[0].properties[Config.hierarch_abs.attr])).toBe(62);
+      Expect(Math.round(outputData.features[1].properties[Config.hierarch_abs.attr])).toBe(15);
     });
 
   });
 
 });
 
-describe('population weighting [hierarchical, relative]', () => {
+describe('binary dasymetric weighting [hierarchical, relative]', () => {
 
   describe('output data', () => {
 
@@ -85,8 +85,8 @@ describe('population weighting [hierarchical, relative]', () => {
     });
 
     it('should calculate the ouput values correctly',() => {
-      Expect(outputData.features[0].properties[Config.hierarch_rel.attr]).toBeGreaterThan(.1).toBeLessThan(.2);
-      Expect(outputData.features[1].properties[Config.hierarch_rel.attr]).toBeGreaterThan(2.2).toBeLessThan(2.3);
+      Expect(outputData.features[0].properties[Config.hierarch_rel.attr]).toBeGreaterThan(30.5).toBeLessThan(30.7);
+      Expect(outputData.features[1].properties[Config.hierarch_rel.attr]).toBeGreaterThan(1.4).toBeLessThan(1.6);
     });
 
   });
@@ -95,7 +95,7 @@ describe('population weighting [hierarchical, relative]', () => {
 
 
 
-describe('population weighting [nonhierarchical, absolute]', () => {
+describe('binary dasymetric weighting [nonhierarchical, absolute]', () => {
 
   describe('output data', () => {
 
@@ -114,8 +114,8 @@ describe('population weighting [nonhierarchical, absolute]', () => {
     });
 
     it('should calculate the ouput values correctly',() => {
-      Expect(outputData.features[0].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(.26).toBeLessThan(.27);
-      Expect(outputData.features[1].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(24.8).toBeLessThan(24.9);
+      Expect(outputData.features[0].properties[Config.nonHierarch_abs.attr]).toBe(42);
+      Expect(outputData.features[1].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(56).toBeLessThan(57);
     });
 
   });
@@ -123,7 +123,7 @@ describe('population weighting [nonhierarchical, absolute]', () => {
 });
 
 
-describe('population weighting [nonhierarchical, relative]', () => {
+describe('binary dasymetric weighting [nonhierarchical, relative]', () => {
 
   describe('output data', () => {
 
@@ -142,8 +142,8 @@ describe('population weighting [nonhierarchical, relative]', () => {
     });
 
     it('should calculate the ouput values correctly',() => {
-      Expect(outputData.features[0].properties[Config.nonHierarch_rel.attr]).toBeGreaterThan(.03).toBeLessThan(.04);
-      Expect(outputData.features[1].properties[Config.nonHierarch_rel.attr]).toBeGreaterThan(3.3).toBeLessThan(3.4);
+      Expect(outputData.features[0].properties[Config.nonHierarch_rel.attr]).toBeGreaterThan(25).toBeLessThan(26);
+      Expect(outputData.features[1].properties[Config.nonHierarch_rel.attr]).toBeGreaterThan(12).toBeLessThan(13);
     });
 
   });

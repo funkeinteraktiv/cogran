@@ -85,8 +85,8 @@ describe('aggregation module', () => {
 
     it('should calculate the ouput values correctly',() => {
       
-      Expect(Math.round(outputData.features[0].properties[Config.basic.attr])).toBe(62);
-      Expect(Math.round(outputData.features[1].properties[Config.basic.attr])).toBe(15);
+      Expect(Math.round(outputData.features[0].properties[Config.basic.attr])).toBe(15);
+      Expect(Math.round(outputData.features[1].properties[Config.basic.attr])).toBe(62);
 
     });
 
