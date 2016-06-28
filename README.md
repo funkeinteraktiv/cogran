@@ -28,15 +28,15 @@ $ npm link
 
 ### Usage Examples
 
-##### Aggregation Example
+##### Aggregation
 
 ```
 $ cogran -a -i test/data/base_data/sourcefeatures.geojson -t data/base_data/targetfeatures_hierarchical.geojson -o test/output.geojson --attr Aggr --mode sum
 ```
 
-##### Areal Interpolation Example
+##### Areal Interpolation
 
-1. Areal Weighting (done)
+1. Simple Area Weighting (done)
 
 ```
 $ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr
