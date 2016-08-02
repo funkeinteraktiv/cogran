@@ -29,6 +29,7 @@
     "shapefile": "^0.3.1",
     "shortid": "^2.2.6",
     "shp-write": "^0.2.5",
+    "simple-statistics": "^2.1.0",
     "turf": "^2.0.2",
     "winston": "^2.2.0"
   },
