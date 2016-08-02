@@ -21,11 +21,13 @@
   "homepage": "https://github.com/berlinermorgenpost/cogran#readme",
   "dependencies": {
     "async": "^1.5.2",
+    "d3": "^4.2.0",
     "lodash": "^4.6.1",
     "object-assign": "^4.1.0",
     "optimist": "^0.6.1",
     "progress": "^1.1.8",
     "shapefile": "^0.3.1",
+    "shortid": "^2.2.6",
     "shp-write": "^0.2.5",
     "turf": "^2.0.2",
     "winston": "^2.2.0"
