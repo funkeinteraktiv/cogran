@@ -6,35 +6,35 @@ const Aggregate = require('../lib/areal-interpolate');
 const FileLoader = require('../lib/fileloader');
 
 const Config = {
-  hierarch_abs: { 
+  hierarch_abs: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
     attr: 'Aggr',
-    binary: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
+    mask: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
     mode: 'linearRegression'
   },
-  
-  hierarch_rel: { 
+
+  hierarch_rel: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
     attr: 'Aggr_rel',
-    binary: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
+    mask: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
     mode: 'linearRegression'
   },
 
-  nonHierarch_abs: { 
+  nonHierarch_abs: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_nonhierarchical.geojson'),
     attr: 'Aggr',
-    binary: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
+    mask: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
     mode: 'linearRegression'
   },
 
-  nonHierarch_rel: { 
+  nonHierarch_rel: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_nonhierarchical.geojson'),
     attr: 'Aggr_rel',
-    binary: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
+    mask: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
     mode: 'linearRegression'
   }
 }
@@ -58,8 +58,8 @@ describe('linear regression [hierarchical, absolute]', () => {
     });
 
     it('should calculate the ouput values correctly',() => {
-      Expect(outputData.features[0].properties[Config.hierarch_abs.attr]).toBeGreaterThan(10.4).toBeLessThan(10.5);
-      Expect(outputData.features[1].properties[Config.hierarch_abs.attr]).toBeGreaterThan(36.6).toBeLessThan(36.7);
+      Expect(outputData.features[0].properties[Config.hierarch_abs.attr]).toBeGreaterThan(20).toBeLessThan(21);
+      Expect(outputData.features[1].properties[Config.hierarch_abs.attr]).toBeGreaterThan(52).toBeLessThan(53);
     });
 
   });

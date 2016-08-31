@@ -17,15 +17,7 @@ const Errors = require('./lib/errors');
 const Logger = require('./lib/logger');
 
 let argv = Optimist
-  .usage('Usage: cogran --aggregate --input <input_shape.shp> --target <target_shape.shp> --output <output_shape.shp> --attr <attribute_name>')
-  .options('a', {
-    alias: 'aggregate',
-    describe: 'Use aggregate mode'
-  })
-  .options('d', {
-    alias: 'disaggregate',
-    describe: 'Use disaggregate mode'
-  })
+  .usage('Usage: cogran --input <input_shape.shp> --target <target_shape.shp> --output <output_shape.shp> --attr <attribute_name>')
   .options('m', {
     alias: 'mode',
     describe: 'The mode used for aggregating/disaggregating, \n aggregation: sum (default),min,average,median,min,max,deviation,variance,count \n disaggregation: arealInterpolation (default)'
@@ -63,26 +55,15 @@ let argv = Optimist
 function main(argv) {
   if(argv.help) return Optimist.showHelp();
   if(argv.version) return Logger.log(Pckg.version);
-  if(argv.aggregate) {
-    return Aggregate(argv, res => {
-      if(argv.output) {
-        FileWriter.write(res, argv.output); 
-      }
-      else {
-        Logger.info('no output file specified');
-      }
-    });
-  }
-  if(argv.disaggregate) {
-    return ArealInterpolate(argv, res => {
-      if(argv.output) {
-        FileWriter.write(res, argv.output); 
-      }
-      else {
-        Logger.info('no output file specified');
-      }
-    });
-  }
+  return ArealInterpolate(argv, res => {
+    if(argv.output) {
+      FileWriter.write(res, argv.output);
+    }
+    else {
+      Logger.info('no output file specified');
+    }
+  });
+  // }
 
   return Optimist.showHelp();
 }

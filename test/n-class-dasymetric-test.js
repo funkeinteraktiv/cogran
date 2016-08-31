@@ -6,35 +6,35 @@ const Aggregate = require('../lib/areal-interpolate');
 const FileLoader = require('../lib/fileloader');
 
 const Config = {
-  hierarch_abs: { 
+  hierarch_abs: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
     attr: 'Aggr',
-    binary: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
+    mask: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
     mode: 'nClassDasymetricWeighting'
   },
-  
-  hierarch_rel: { 
+
+  hierarch_rel: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
     attr: 'Aggr_rel',
-    binary: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
+    mask: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
     mode: 'nClassDasymetricWeighting'
   },
 
-  nonHierarch_abs: { 
+  nonHierarch_abs: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_nonhierarchical.geojson'),
     attr: 'Aggr',
-    binary: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
+    mask: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
     mode: 'nClassDasymetricWeighting'
   },
 
-  nonHierarch_rel: { 
+  nonHierarch_rel: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_nonhierarchical.geojson'),
     attr: 'Aggr_rel',
-    binary: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
+    mask: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
     mode: 'nClassDasymetricWeighting'
   }
 }

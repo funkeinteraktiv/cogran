@@ -28,61 +28,54 @@ $ npm link
 
 ### Usage Examples
 
-##### Aggregation
-
-```
-$ cogran -a -i test/data/base_data/sourcefeatures.geojson -t data/base_data/targetfeatures_hierarchical.geojson -o test/output.geojson --attr Aggr --mode sum
-```
-
 ##### Areal Interpolation
 
-1. Simple Area Weighting (done)
+1. Simple Area Weighting
 
 ```
-$ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr
+$ cogran -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr
 ```
 
-2. Population Weighting (done)
+2. Population Weighting
 
 ```
-$ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr --weight population --mode populationWeighting
+$ cogran -i test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --weight population --mode populationWeighting
 ```
 
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr Aggr_rel --weight population --mode populationWeightingRelative -o test.geojson
+$ cogran -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr Aggr_rel --weight population --mode populationWeightingRelative -o output.geojson
 ```
 
-3. Binary Dasymetric Weighting (done)
+3. Binary Dasymetric Weighting
 
 ```
-$ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr --weight population --mode binaryDasymetricWeighting --binary test/data/base_data/binarymask.geojson
+$ cogran -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeighting --mask test/data/base_data/binarymask.geojson
 ```
 
-4. N-Class Dasymetric Weighting (in development)
+4. N-Class Dasymetric Weighting
 
 ```
-$ cogran --disaggregate --input test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson --output test/data/output.geojson --attr Aggr --weight population --mode nClassDasymetricWeighting --binary test/data/base_data/binarymask.geojson
+$ cogran -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeighting --mask test/data/base_data/nclassmask.geojson
 ```
 
+5. Linear Regression
+
+```
+$ cogran -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode linearRegression --mask test/data/base_data/nclassmask.geojson
+```
 
 ### Options
 
-You can specify these cli options:
-
-* **--aggregate, -a** - Use aggregate mode
-* **--disaggregate, -d** - Use disaggregate mode
-* **--mode, -m** - The mode used for aggregating/disaggregating; aggregation: sum (default),min,average,median,min,max,deviation,variance,count; disaggregation: arealInterpolation (default)
+* **--mode, -m** - Possible values: populationWeighting, populationWeightingRelative, binaryDasymetricWeighting, nClassDasymetricWeighting, linearRegression
 * **--input, -i** - The input shapefile that will be used for aggregation/disaggregation
-* **--target, -t** - The path of the target shapefile
-* **--output, -o** - The path of the output zip file
+* **--target, -t** - The path of the target geojson
+* **--output, -o** - The path of the output geojson file
 * **--attr** - The attribute that will be used
-* **--weight** - The attribute that is used for weighting (only for disaggregation)
+* **--weight** - The attribute that is used for weighting
 * **--verbose** - Maximum log level
 * **--silent** - disable logging
 
 ### Tests
-
-To run tests with mocha:
 
 ```
 $ npm test
@@ -90,14 +83,8 @@ $ npm test
 
 ### Todos
 
-* [x] Add better logging
-* [ ] Add disaggregation function
-* [x] Add tests
-* [ ] Find a solution for dealing with percentages and relative values
-* [ ] Add better examples
-* [ ] Number validation improvements
-* [ ] Improve Documentation
-* [ ] "Mode" should be renamed to "Method"
+* Brauchen wir außer bei populationWeighting noch extra Methoden für relativ-Werte?
+* PopulationWeighting Zwischenwerte überprüfen und Berechnungen checken
 
 ### Dependencies
 
