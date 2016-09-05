@@ -28,44 +28,43 @@ $ npm link
 
 ### Usage Examples
 
-##### Areal Interpolation
 
-1. Simple Area Weighting
+####  Simple Area Weighting
 
-for absolute values
+   for absolute values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr
 ```
 
-2. Population Weighting
+####  Population Weighting
 
-for absolute values
+   for absolute values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --weight population --mode populationWeighting
 ```
 
-for relative values
+   for relative values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr Aggr_rel --weight population --mode populationWeightingRelative -o test.geojson
 ```
 
-3. Binary Dasymetric Weighting
+####  Binary Dasymetric Weighting
 
-for absolute values
+   for absolute values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeighting --mask test/data/base_data/binarymask.geojson
 ```
 
-4. N-Class Dasymetric Weighting
+####  N-Class Dasymetric Weighting
 
-for absolute values
+   for absolute values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeighting --mask test/data/base_data/nclassmask.geojson
 ```
 
-5. Linear Regression
+####  Linear Regression
 
-for absolute values
+   for absolute values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode linearRegression --mask test/data/base_data/nclassmask.geojson
 ```
