@@ -28,48 +28,58 @@ $ npm link
 
 ### Usage Examples
 
-##### Areal Interpolation
 
-1. Simple Area Weighting
+####  Simple Area Weighting
 
+   for absolute values
 ```
-$ cogran -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr
-```
-
-2. Population Weighting
-
-```
-$ cogran -i test/data/base_data/sourcefeatures.geojson --target test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --weight population --mode populationWeighting
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr
 ```
 
+####  Population Weighting
+
+   for absolute values
 ```
-$ cogran -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr Aggr_rel --weight population --mode populationWeightingRelative -o output.geojson
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --weight population --mode populationWeighting
 ```
 
-3. Binary Dasymetric Weighting
-
+   for relative values
 ```
-$ cogran -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeighting --mask test/data/base_data/binarymask.geojson
-```
-
-4. N-Class Dasymetric Weighting
-
-```
-$ cogran -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeighting --mask test/data/base_data/nclassmask.geojson
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr Aggr_rel --weight population --mode populationWeightingRelative -o test.geojson
 ```
 
-5. Linear Regression
+####  Binary Dasymetric Weighting
 
+   for absolute values
 ```
-$ cogran -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode linearRegression --mask test/data/base_data/nclassmask.geojson
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeighting --mask test/data/base_data/binarymask.geojson
 ```
+
+####  N-Class Dasymetric Weighting
+
+   for absolute values
+```
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeighting --mask test/data/base_data/nclassmask.geojson
+```
+
+####  Linear Regression
+
+   for absolute values
+```
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode linearRegression --mask test/data/base_data/nclassmask.geojson
+```
+
 
 ### Options
 
+You can specify these cli options:
+
+* **--aggregate, -a** - Use aggregate mode
+* **--disaggregate, -d** - Use disaggregate mode
 * **--mode, -m** - Possible values: populationWeighting, populationWeightingRelative, binaryDasymetricWeighting, nClassDasymetricWeighting, linearRegression
-* **--input, -i** - The input shapefile that will be used for aggregation/disaggregation
+* **--input, -i** - The input geojson that will be used for aggregation/disaggregation
 * **--target, -t** - The path of the target geojson
-* **--output, -o** - The path of the output geojson file
+* **--output, -o** - The path of the output geojson
 * **--attr** - The attribute that will be used
 * **--weight** - The attribute that is used for weighting
 * **--verbose** - Maximum log level
@@ -77,14 +87,17 @@ $ cogran -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/ta
 
 ### Tests
 
+To run tests with mocha:
+
 ```
 $ npm test
 ```
 
 ### Todos
 
-* Brauchen wir auÃŸer bei populationWeighting noch extra Methoden fÃ¼r relativ-Werte?
-* PopulationWeighting Zwischenwerte Ã¼berprÃ¼fen und Berechnungen checken
+* [ ] Außer bei populationWeighting noch extra Methoden für Relativ-Werte!
+* [x] PopulationWeighting Zwischenwerte überprüfen und Berechnungen checken
+
 
 ### Dependencies
 
