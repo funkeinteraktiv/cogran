@@ -36,6 +36,11 @@ $ npm link
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr
 ```
 
+   for relative values
+```
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson --attr Relative --mode arealWeightingRelative -o output.geojson
+```
+
 ####  Population Weighting
 
    for absolute values
@@ -45,7 +50,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
    for relative values
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr Aggr_rel --weight population --mode populationWeightingRelative -o test.geojson
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr Relative --weight population --mode populationWeightingRelative -o output.geojson
 ```
 
 ####  Binary Dasymetric Weighting
