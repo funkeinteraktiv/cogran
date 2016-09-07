@@ -101,8 +101,6 @@ $ npm test
 ### Todos
 
 * [ ] Außer bei populationWeighting noch extra Methoden für Relativ-Werte!
-* [x] PopulationWeighting Zwischenwerte überprüfen und Berechnungen checken
-
 
 ### Dependencies
 
