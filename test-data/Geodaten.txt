@@ -1,0 +1,76 @@
+Bayern:
+https://opendata.bayern.de/detailansicht/datensatz/verwaltungsgebiete?0
+...+Ordner
+
+Brandenburg
+
+Verfahrenumringe/-gebiete:
+http://217.6.137.235/cgi-bin/mapserv?map=/usr/lib/cgi-bin/Verfahren.map&?&SERVICE=WFS
+
+Neubestand:
+http://217.6.137.235/cgi-bin/mapserv?map=/usr/lib/cgi-bin/Neubestand.map&?&SERVICE=WFS
+
+Verwaltungsgrenzen:
+http://217.6.137.235/cgi-bin/mapserv?map=/usr/lib/cgi-bin/Neubestand.map&?&SERVICE=WFS
+
+
+Meck-Pomm:
+Alkis-Daten über WFS:
+https://www.geodaten-mv.de/dienste/alkis_wfs_sf?
+https://www.geoportal-mv.de/land-mv/GeoPortalMV_prod/de/Geowebdienste/INSPIRE-Themen/Verwaltungseinheiten/index.jsp
+
+Niedersachsen:
+Unübersichtlich und verstreut:
+http://www.geodaten.niedersachsen.de/startseite/gdini/kommunale_gdi/geodaten_staedte_und_gemeinden/geodaten-der-staedte-und-gemeinden-107246.html
+
+
+Rheinland-Pfalz:
+http://www.geoportal.rlp.de/portal/servicebereich/erweiterte-suche.html?&uid=12c69a76-d2d1-f154-e12a-e9ca48e33f7e&cat=dienste
+
+Saarland:
+Bei allen testen ob WFS: 
+http://geoportal.saarland.de/portal/de/fachanwendungen/bebauungsplaene-der-saarlaendischen-gemeinden.html //sehr zerstueckelt
+http://geoportal.saarland.de/mapbender/php/wms.php?layer_id=32147&PHPSESSID=4ddf9a973586179689cdd0cf08f611f0&INSPIRE=1&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS //sehr interessant
+
+Sachsen
++...siehe Ordner
+https://web1.extranet.sachsen.de/geoservice/vwa3?request=GetCapabilities&service=WFS&lang=de //wichtig, vielleicht bereits im ordner
+
+https://www.umwelt.sachsen.de/umwelt/infosysteme/ags/services/natur/schutzgebiete_utm/MapServer/WFSServer?request=GetCapabilities&service=WFS&version=1.1.0
+https://www.umwelt.sachsen.de/umwelt/infosysteme/ags/services/natur/btlnk_utm/MapServer/WFSServer?request=GetCapabilities&service=WFS&version=1.1.0
+https://www.umwelt.sachsen.de/umwelt/infosysteme/ags/services/natur/pnv_utm/MapServer/WFSServer?request=GetCapabilities&service=WFS&version=1.1.0
+
+Deutschlandweit
+CORINE Landcover classes:
+http://sg.geodatenzentrum.de/wfs_clc10_2012
+
+Sehr wichtig!!!!!
+http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=0&gdz_unt_zeile=0&gdz_user_id=0
+
+testen
+https://www-genesis.destatis.de/gis/cgi-bin/mapserv?map=/home/fgs/gis/gisdocs/themenkarten/demografie.map;LAYERS=Kleingrenzen;SERVICE=WFS
+
+dann wuerden auch diese funktionieren:
+http://www.geoportal.de/DE/Geoportal/Karten/Themenkarten/themenkarten.html?lang=de
+
+
+
+Staedte
+
+Frankfurt a. M. 
+http://www.offenedaten.frankfurt.de/dataset/wahlatlas-2015-geodaten
+
+
+Keine brauchbaren, kostenlosen Daten erhältlich für:
+Stuttgart, Bremen, Dortmund, Hessen, NRW, SH,
+
+
+Möglichkeit: 
+http://opengeodb.org/wiki/OpenGeoDB
+
+Nützliches:
+
+Download von allen daten zu Bundesland aus OSM (mit QGIS-PlugIn öffnen):
+http://download.geofabrik.de/europe/germany/baden-wuerttemberg-latest.osm.pbf 
+
+KML2Shp : http://freegeographytools.com/2009/online-kml-to-shapefile-converter
