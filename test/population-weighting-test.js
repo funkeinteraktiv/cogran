@@ -58,8 +58,8 @@ describe('population weighting [hierarchical, absolute]', () => {
     });
 
     it('should calculate the ouput values correctly',() => {
-      Expect(outputData.features[0].properties[Config.hierarch_abs.attr]).toBeGreaterThan(7.3).toBeLessThan(7.4);
-      Expect(outputData.features[1].properties[Config.hierarch_abs.attr]).toBeGreaterThan(15.8).toBeLessThan(15.9);
+      Expect(outputData.features[0].properties[Config.hierarch_abs.attr]).toBeGreaterThan(14).toBeLessThan(16);
+      Expect(outputData.features[1].properties[Config.hierarch_abs.attr]).toBeGreaterThan(61).toBeLessThan(63);
     });
 
   });
@@ -85,8 +85,8 @@ describe('population weighting [hierarchical, relative]', () => {
     });
 
     it('should calculate the ouput values correctly',() => {
-      Expect(outputData.features[0].properties[Config.hierarch_rel.attr]).toBeGreaterThan(.1).toBeLessThan(.2);
-      Expect(outputData.features[1].properties[Config.hierarch_rel.attr]).toBeGreaterThan(2.2).toBeLessThan(2.3);
+      Expect(outputData.features[0].properties[Config.hierarch_rel.attr]).toBeGreaterThan(1.4).toBeLessThan(1.6);
+      Expect(outputData.features[1].properties[Config.hierarch_rel.attr]).toBeGreaterThan(30.5).toBeLessThan(30.7);
     });
 
   });
@@ -114,8 +114,8 @@ describe('population weighting [nonhierarchical, absolute]', () => {
     });
 
     it('should calculate the ouput values correctly',() => {
-      Expect(outputData.features[0].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(.26).toBeLessThan(.27);
-      Expect(outputData.features[1].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(24.8).toBeLessThan(24.9);
+      Expect(outputData.features[0].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(9.2).toBeLessThan(9.3);
+      Expect(outputData.features[1].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(67).toBeLessThan(68);
     });
 
   });
@@ -142,8 +142,8 @@ describe('population weighting [nonhierarchical, relative]', () => {
     });
 
     it('should calculate the ouput values correctly',() => {
-      Expect(outputData.features[0].properties[Config.nonHierarch_rel.attr]).toBeGreaterThan(.03).toBeLessThan(.04);
-      Expect(outputData.features[1].properties[Config.nonHierarch_rel.attr]).toBeGreaterThan(3.3).toBeLessThan(3.4);
+      Expect(outputData.features[0].properties[Config.nonHierarch_rel.attr]).toBeGreaterThan(2.7).toBeLessThan(2.8);
+      Expect(outputData.features[1].properties[Config.nonHierarch_rel.attr]).toBeGreaterThan(29).toBeLessThan(30);
     });
 
   });
