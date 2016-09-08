@@ -79,7 +79,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 ####  Linear Regression
 
-+ for absolute values
+&nbsp; for absolute values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode linearRegression --mask test/data/base_data/nclassmask.geojson
 ```
