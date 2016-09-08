@@ -57,7 +57,7 @@ describe('linear regression [hierarchical, absolute]', () => {
 
     });
 
-    it('should calculate the ouput values correctly',() => {
+    it('should calculate the output values correctly',() => {
       Expect(outputData.features[0].properties[Config.hierarch_abs.attr]).toBeGreaterThan(20).toBeLessThan(21);
       Expect(outputData.features[1].properties[Config.hierarch_abs.attr]).toBeGreaterThan(52).toBeLessThan(53);
     });
