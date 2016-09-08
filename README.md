@@ -31,58 +31,59 @@ $ npm link
 
 ####  Simple Area Weighting
 
-   for absolute values
+&nbsp; for absolute values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr
 ```
 
-   for relative values
+&nbsp; for relative values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson --attr Relative --mode arealWeightingRelative -o output.geojson
 ```
 
 ####  Population Weighting
 
-   for absolute values
+&nbsp; for absolute values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --weight population --mode populationWeighting
 ```
 
-   for relative values
+&nbsp; for relative values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr Relative --weight population --mode populationWeightingRelative -o output.geojson
 ```
 
 ####  Binary Dasymetric Weighting
 
-   for absolute values
+&nbsp; for absolute values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeighting --mask test/data/base_data/binarymask.geojson
 ```
 
-   for relative values
+&nbsp; for relative values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Relative --mode binaryDasymetricWeightingRelative --mask test/data/base_data/binarymask.geojson
 ```
 
 ####  N-Class Dasymetric Weighting
 
-   for absolute values
+&nbsp; for absolute values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeighting --mask test/data/base_data/nclassmask.geojson
 ```
 
-   for relative values
+&nbsp; for relative values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Relative --mode nClassDasymetricWeightingRelative --mask test/data/base_data/nclassmask.geojson
 ```
 
 ####  Linear Regression
 
-   for absolute values
+&nbsp; for absolute values
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode linearRegression --mask test/data/base_data/nclassmask.geojson
 ```
+
 
 
 ### Options
@@ -91,8 +92,8 @@ You can specify these cli options:
 
 * **--aggregate, -a** - Use aggregate mode
 * **--disaggregate, -d** - Use disaggregate mode
-* **--mode, -m** - Possible values: populationWeighting, populationWeightingRelative, binaryDasymetricWeighting, nClassDasymetricWeighting, linearRegression
-* **--input, -i** - The input geojson that will be used for aggregation/disaggregation
+* **--mode, -m** - Possible values: populationWeighting, populationWeightingRelative, binaryDasymetricWeighting, binaryDasymetricWeightingRealative, nClassDasymetricWeighting, nClassDasymetricWeightingRelative, linearRegression
+* **--input, -i** - The path of the input geojson that will be used for aggregation/disaggregation
 * **--target, -t** - The path of the target geojson
 * **--output, -o** - The path of the output geojson
 * **--attr** - The attribute that will be used
@@ -100,17 +101,18 @@ You can specify these cli options:
 * **--verbose** - Maximum log level
 * **--silent** - disable logging
 
+
 ### Tests
 
 To run tests with mocha:
-
 ```
 $ npm test
 ```
 
 ### Todos
 
-* [ ] Außer bei populationWeighting noch extra Methoden für Relativ-Werte!
+* [ ] Linear Regression
+* [ ] Linear Regression Relative
 
 ### Dependencies
 

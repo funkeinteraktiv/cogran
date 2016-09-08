@@ -17,9 +17,9 @@ const Config = {
   hierarch_rel: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
-    attr: 'Aggr_rel',
+    attr: 'Relative',
     mask: Path.resolve(__dirname, 'data/base_data/binarymask.geojson'),
-    mode: 'binaryDasymetricWeighting'
+    mode: 'binaryDasymetricWeightingRelative'
   },
 
   nonHierarch_abs: {
@@ -33,9 +33,9 @@ const Config = {
   nonHierarch_rel: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_nonhierarchical.geojson'),
-    attr: 'Aggr_rel',
+    attr: 'Relative',
     mask: Path.resolve(__dirname, 'data/base_data/binarymask.geojson'),
-    mode: 'binaryDasymetricWeighting'
+    mode: 'binaryDasymetricWeightingRelative'
   }
 }
 
@@ -86,7 +86,7 @@ describe('binary dasymetric weighting [hierarchical, relative]', () => {
 
     it('should calculate the ouput values correctly',() => {
       Expect(outputData.features[0].properties[Config.hierarch_rel.attr]).toBeGreaterThan(1.4).toBeLessThan(1.6);
-      Expect(outputData.features[1].properties[Config.hierarch_rel.attr]).toBeGreaterThan(12.6).toBeLessThan(12.7);
+      Expect(outputData.features[1].properties[Config.hierarch_rel.attr]).toBeGreaterThan(12.5).toBeLessThan(12.7);
     });
 
   });
