@@ -85,6 +85,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ```
 
 
+
 ### Options
 
 You can specify these cli options:
@@ -100,6 +101,7 @@ You can specify these cli options:
 * **--verbose** - Maximum log level
 * **--silent** - disable logging
 
+
 ### Tests
 
 To run tests with mocha:
@@ -110,7 +112,7 @@ $ npm test
 ### Todos
 
 * [ ] Linear Regression
-* [ ] bei Linear Regression noch extra Methode für Relativ-Werte
+* [ ] Linear Regression Relative
 
 ### Dependencies
 
