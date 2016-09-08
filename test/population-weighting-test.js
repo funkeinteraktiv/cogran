@@ -6,15 +6,15 @@ const Aggregate = require('../lib/areal-interpolate');
 const FileLoader = require('../lib/fileloader');
 
 const Config = {
-  hierarch_abs: { 
+  hierarch_abs: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
     attr: 'Aggr',
     weight: 'population',
     mode: 'populationWeighting'
   },
-  
-  hierarch_rel: { 
+
+  hierarch_rel: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
     attr: 'Aggr_rel',
@@ -22,7 +22,7 @@ const Config = {
     mode: 'populationWeightingRelative'
   },
 
-  nonHierarch_abs: { 
+  nonHierarch_abs: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_nonhierarchical.geojson'),
     attr: 'Aggr',
@@ -30,7 +30,7 @@ const Config = {
     mode: 'populationWeighting'
   },
 
-  nonHierarch_rel: { 
+  nonHierarch_rel: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_nonhierarchical.geojson'),
     attr: 'Aggr_rel',
@@ -56,8 +56,7 @@ describe('population weighting [hierarchical, absolute]', () => {
       });
 
     });
-
-    it('should calculate the ouput values correctly',() => {
+    it('should calculate the output values correctly',() => {
       Expect(outputData.features[0].properties[Config.hierarch_abs.attr]).toBeGreaterThan(14).toBeLessThan(16);
       Expect(outputData.features[1].properties[Config.hierarch_abs.attr]).toBeGreaterThan(61).toBeLessThan(63);
     });
@@ -84,7 +83,7 @@ describe('population weighting [hierarchical, relative]', () => {
 
     });
 
-    it('should calculate the ouput values correctly',() => {
+    it('should calculate the output values correctly',() => {
       Expect(outputData.features[0].properties[Config.hierarch_rel.attr]).toBeGreaterThan(1.4).toBeLessThan(1.6);
       Expect(outputData.features[1].properties[Config.hierarch_rel.attr]).toBeGreaterThan(30.5).toBeLessThan(30.7);
     });
@@ -113,7 +112,7 @@ describe('population weighting [nonhierarchical, absolute]', () => {
 
     });
 
-    it('should calculate the ouput values correctly',() => {
+    it('should calculate the output values correctly',() => {
       Expect(outputData.features[0].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(9.2).toBeLessThan(9.3);
       Expect(outputData.features[1].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(67).toBeLessThan(68);
     });
@@ -141,7 +140,7 @@ describe('population weighting [nonhierarchical, relative]', () => {
 
     });
 
-    it('should calculate the ouput values correctly',() => {
+    it('should calculate the output values correctly',() => {
       Expect(outputData.features[0].properties[Config.nonHierarch_rel.attr]).toBeGreaterThan(2.7).toBeLessThan(2.8);
       Expect(outputData.features[1].properties[Config.nonHierarch_rel.attr]).toBeGreaterThan(29).toBeLessThan(30);
     });

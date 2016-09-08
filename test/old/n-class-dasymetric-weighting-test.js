@@ -43,7 +43,7 @@ describe('n-class-dasymetric-weighting [hierarchical, absolute]', () => {
 
     });
 
-    it('should calculate the ouput values correctly',() => {
+    it('should calculate the output values correctly',() => {
       Expect(Math.round(outputData.features[0].properties[Config.hierarch_abs.attr])).toBe(62);
       Expect(Math.round(outputData.features[1].properties[Config.hierarch_abs.attr])).toBe(15);
     });
@@ -70,7 +70,7 @@ describe('n-class-dasymetric-weighting [nonhierarchical, absolute]', () => {
 
     });
 
-    it('should calculate the ouput values correctly',() => {
+    it('should calculate the output values correctly',() => {
       Expect(outputData.features[0].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(45).toBeLessThan(46);
       Expect(outputData.features[1].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(3).toBeLessThan(4);
     });
