@@ -97,7 +97,7 @@ You can specify these cli options:
 * **--target, -t** - The path of the target geojson
 * **--output, -o** - The path of the output geojson
 * **--attr** - The attribute that will be used
-* **--weight** - The attribute that is used for weighting
+* **--weight** - The attribute from target geojson that is used for weighting
 * **--verbose** - Maximum log level
 * **--silent** - disable logging
 
