@@ -2,9 +2,7 @@
 
 CoGran - A command line tool for combining data of different spatial granularity
 
-
 &nbsp;
-
 
 
 **Note: Project is still under development.**
