@@ -34,7 +34,7 @@ $ npm link
 Note: No String datatypes are allowed for attribute values (use Int or Real instead)
 
 
-###  1. Simple Area Weighting
+###&nbsp;  1. Simple Area Weighting
 weights the attribute value by the area of intersection between source and target file
 
 &nbsp;&nbsp; for absolute values
