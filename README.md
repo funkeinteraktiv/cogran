@@ -1,3 +1,6 @@
+body {
+  font-size: 10px; }
+
 # cogran.js
 
 CoGran - A command line tool for combining data of different spatial granularity
