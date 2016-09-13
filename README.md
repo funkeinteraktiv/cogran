@@ -62,7 +62,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ####  Binary Dasymetric Weighting
 additional control zones classified by binary values [0; 1] are used to mask out areas [0] where the attribute does not occur (e.g. uninhabited areas)
 
-&nbsp; **Note: binary values have to be listed in an attribute called *binary***
+&nbsp; **Note: binary values have to be listed in an attribute called *binary* **
 
 &nbsp; for absolute values
 ```
