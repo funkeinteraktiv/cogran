@@ -29,11 +29,11 @@ $ npm link
 ### Usage Examples
 
 
-**Note: No String datatypes are allowed for attribute values (use Int or Real instead)**
+
+Note: No String datatypes are allowed for attribute values (use Int or Real instead)
 
 
 ####  Simple Area Weighting
-
 weights the attribute value by the area of intersection between source and target file
 
 &nbsp; for absolute values
@@ -47,7 +47,6 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ```
 
 ####  Attribute Weighting
-
 weights the attribute value by the relationship of an additional attribute (e.g. population)
 
 &nbsp; for absolute values
@@ -61,7 +60,6 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ```
 
 ####  Binary Dasymetric Weighting
-
 additional control zones classified by binary values [0; 1] are used to mask out areas [0] where the attribute does not occur (e.g. uninhabited areas)
 
 &nbsp; **Note: binary values have to be listed in an attribute called *binary***
@@ -77,7 +75,6 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ```
 
 ####  N-Class Dasymetric Weighting
-
 additional control zones classified by n classes (e.g. land use) are used to weight the attribute by its percentage values within the control zones
 
 &nbsp; **Note: percentage values have to be listed in an attribute called *prozent***
@@ -93,7 +90,6 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ```
 
 ####  Linear Regression
-
 a linear correlation between an independent variable (e.g. area size) and a dependent variable (the attribute value) is used to estimate the attribute value
 
 &nbsp; for absolute values
