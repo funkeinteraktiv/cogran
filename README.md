@@ -62,7 +62,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 ###&nbsp;  3. Binary Dasymetric Weighting
 &nbsp; additional control zones classified by binary values [0; 1] are used to mask out areas [0] where the attribute does not occur  
-&nbsp;(e.g. uninhabited areas)
+&nbsp; (e.g. uninhabited areas)
 
 &nbsp; **Note: binary values have to be listed in an attribute called 'binary'**
 
@@ -78,7 +78,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 ###&nbsp;  4. N-Class Dasymetric Weighting
 &nbsp; additional control zones classified by n classes (e.g. land use) are used to weight the attribute value by its percentage values  
-&nbsp;within the control zones
+&nbsp; within the control zones
 
 &nbsp; **Note: percentage values have to be listed in an attribute called 'prozent'**
 
@@ -94,7 +94,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 ###&nbsp;  5. Linear Regression
 &nbsp; a linear correlation between an independent variable (e.g. area size) and a dependent variable (the attribute value) is used to  
-&nbsp;estimate the attribute value
+&nbsp; estimate the attribute value
 
 &nbsp;&nbsp;&nbsp; for absolute values:
 ```
