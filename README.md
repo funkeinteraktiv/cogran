@@ -33,6 +33,7 @@ $ npm link
 Note: No String datatypes are allowed for attribute values (use Int or Real instead)
 
 
+
 ###  1. Simple Area Weighting
 weights the attribute value by the area of intersection between source and target file
 
@@ -46,6 +47,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson --attr Relative --mode arealWeightingRelative -o output.geojson
 ```
 
+
 ###  2. Attribute Weighting
 weights the attribute value by an additional attribute (e.g. population)
 
@@ -58,6 +60,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr Relative --weight population --mode populationWeightingRelative -o output.geojson
 ```
+
 
 ###  3. Binary Dasymetric Weighting
 additional control zones classified by binary values [0; 1] are used to mask out areas [0] where the attribute does not occur (e.g. uninhabited areas)
@@ -74,6 +77,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Relative --mode binaryDasymetricWeightingRelative --mask test/data/base_data/binarymask.geojson
 ```
 
+
 ###  4. N-Class Dasymetric Weighting
 additional control zones classified by n classes (e.g. land use) are used to weight the attribute value by its percentage values within the control zones
 
@@ -88,6 +92,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Relative --mode nClassDasymetricWeightingRelative --mask test/data/base_data/nclassmask.geojson
 ```
+
 
 ###  5. Linear Regression
 a linear correlation between an independent variable (e.g. area size) and a dependent variable (the attribute value) is used to estimate the attribute value
