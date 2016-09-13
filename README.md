@@ -1,11 +1,12 @@
 # cogran.js
 
-CoGran - A command line tool for combining data of different spatial granularity
-
+CoGran - A command line tool for combining data of different spatial granularity  
+  
+  
 **Note: Project is still under development.**
-
-
-### Installation
+  
+  
+## Installation
 
 To install the cli you need to clone the repository first.
 
@@ -26,67 +27,83 @@ Using the link command, we install cogran globally:
 $ npm link
 ```
 
-### Usage Examples
+## Usage Examples
 
 
-####  Simple Area Weighting
 
-&nbsp; for absolute values
+Note: No String datatypes are allowed for attribute values (use Int or Real instead)
+
+
+###&nbsp;  1. Simple Area Weighting
+&nbsp; weights the attribute value by the area of intersection between source and target file
+
+&nbsp;&nbsp;&nbsp; for absolute values:
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr
 ```
 
-&nbsp; for relative values
+&nbsp;&nbsp;&nbsp; for relative values:
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson --attr Relative --mode arealWeightingRelative -o output.geojson
 ```
 
-####  Population Weighting
+###&nbsp;  2. Attribute Weighting
+&nbsp; weights the attribute value by an additional attribute (e.g. population)
 
-&nbsp; for absolute values
+&nbsp;&nbsp;&nbsp; for absolute values:
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --weight population --mode populationWeighting
 ```
 
-&nbsp; for relative values
+&nbsp;&nbsp;&nbsp; for relative values:
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr Relative --weight population --mode populationWeightingRelative -o output.geojson
 ```
 
-####  Binary Dasymetric Weighting
+###&nbsp;  3. Binary Dasymetric Weighting
+&nbsp; additional control zones classified by binary values [0; 1] are used to mask out areas [0] where the attribute does not occur  
+&nbsp; (e.g. uninhabited areas)
 
-&nbsp; for absolute values
+&nbsp; **Note: binary values have to be listed in an attribute called 'binary'**
+
+&nbsp;&nbsp;&nbsp; for absolute values:
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeighting --mask test/data/base_data/binarymask.geojson
 ```
 
-&nbsp; for relative values
+&nbsp;&nbsp;&nbsp; for relative values:
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Relative --mode binaryDasymetricWeightingRelative --mask test/data/base_data/binarymask.geojson
 ```
 
-####  N-Class Dasymetric Weighting
+###&nbsp;  4. N-Class Dasymetric Weighting
+&nbsp; additional control zones classified by n classes (e.g. land use) are used to weight the attribute value by its percentage values  
+&nbsp; within the control zones
 
-&nbsp; for absolute values
+&nbsp; **Note: percentage values have to be listed in an attribute called 'prozent'**
+
+&nbsp;&nbsp;&nbsp; for absolute values:
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeighting --mask test/data/base_data/nclassmask.geojson
 ```
 
-&nbsp; for relative values
+&nbsp;&nbsp;&nbsp; for relative values:
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Relative --mode nClassDasymetricWeightingRelative --mask test/data/base_data/nclassmask.geojson
 ```
 
-####  Linear Regression
+###&nbsp;  5. Linear Regression
+&nbsp; a linear correlation between an independent variable (e.g. area size) and a dependent variable (the attribute value) is used to  
+&nbsp; estimate the attribute value
 
-&nbsp; for absolute values
+&nbsp;&nbsp;&nbsp; for absolute values:
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode linearRegression --mask test/data/base_data/nclassmask.geojson
 ```
 
 
 
-### Options
+## Options
 
 You can specify these cli options:
 
@@ -102,18 +119,18 @@ You can specify these cli options:
 * **--silent** - disable logging
 
 
-### Tests
+## Tests
 
 To run tests with mocha:
 ```
 $ npm test
 ```
 
-### Todos
+## Todos
 
 * [ ] Linear Regression
 * [ ] Linear Regression Relative
 
-### Dependencies
+## Dependencies
 
 * node.js 5.0 or higher
