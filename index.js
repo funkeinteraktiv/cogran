@@ -18,10 +18,6 @@ const Logger = require('./lib/logger');
 
 let argv = Optimist
   .usage('Usage: cogran --input <input_shape.shp> --target <target_shape.shp> --output <output_shape.shp> --attr <attribute_name>')
-  .options('m', {
-    alias: 'mode',
-    describe: 'The mode used for aggregating/disaggregating, \n aggregation: sum (default),min,average,median,min,max,deviation,variance,count \n disaggregation: arealInterpolation (default)'
-  })
   .options('i', {
     alias: 'input',
     describe: 'The input shapefile that will be used for aggregation/disaggregation',
@@ -63,7 +59,6 @@ function main(argv) {
       Logger.info('no output file specified');
     }
   });
-  // }
 
   return Optimist.showHelp();
 }
