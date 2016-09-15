@@ -44,6 +44,11 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 &nbsp;&nbsp;&nbsp; for relative values:
 ```
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr kaufkraft --mode arealWeightingAdvanced
+```
+
+&nbsp;&nbsp;&nbsp; for relative values related to absolute values:
+```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson --attr Relative --mode arealWeightingRelative -o output.geojson
 ```
 
@@ -52,12 +57,17 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 &nbsp;&nbsp;&nbsp; for absolute values:
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --weight population --mode populationWeighting
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --weight population --mode attributeWeighting
 ```
 
 &nbsp;&nbsp;&nbsp; for relative values:
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr Relative --weight population --mode populationWeightingRelative -o output.geojson
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr kaufkraft --weight population --mode attributeWeightingAdvanced
+```
+
+&nbsp;&nbsp;&nbsp; for relative values related to absolute values:
+```
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr Relative --weight population --mode attributeWeightingRelative -o output.geojson
 ```
 
 ###&nbsp;  3. Binary Dasymetric Weighting
@@ -71,7 +81,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeighting --mask test/data/base_data/binarymask.geojson
 ```
 
-&nbsp;&nbsp;&nbsp; for relative values:
+&nbsp;&nbsp;&nbsp; for relative values related to absolute values:
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Relative --mode binaryDasymetricWeightingRelative --mask test/data/base_data/binarymask.geojson
 ```
@@ -87,7 +97,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeighting --mask test/data/base_data/nclassmask.geojson
 ```
 
-&nbsp;&nbsp;&nbsp; for relative values:
+&nbsp;&nbsp;&nbsp; for relative values related to absolute values:
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Relative --mode nClassDasymetricWeightingRelative --mask test/data/base_data/nclassmask.geojson
 ```
@@ -107,9 +117,8 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 You can specify these cli options:
 
-* **--aggregate, -a** - Use aggregate mode
-* **--disaggregate, -d** - Use disaggregate mode
-* **--mode, -m** - Possible values: populationWeighting, populationWeightingRelative, binaryDasymetricWeighting, binaryDasymetricWeightingRealative, nClassDasymetricWeighting, nClassDasymetricWeightingRelative, linearRegression
+* **--disaggregate, -d** - Use (dis)aggregate mode
+* **--mode, -m** - Possible values: arealWeightingAdvanced, arealWeightingRelative, attributeWeighting, attributeWeightingAdvanced, attributeWeightingRelative, binaryDasymetricWeighting, binaryDasymetricWeightingRealative, nClassDasymetricWeighting, nClassDasymetricWeightingRelative, linearRegression
 * **--input, -i** - The path of the input geojson that will be used for aggregation/disaggregation
 * **--target, -t** - The path of the target geojson
 * **--output, -o** - The path of the output geojson
