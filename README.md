@@ -37,7 +37,7 @@ Note: No String datatypes are allowed for attribute values (use Int or Real inst
 ###&nbsp;  1. Simple Area Weighting
 &nbsp; weights the attribute value by the area of intersection between source and target file
 
-&nbsp;&nbsp;&nbsp; for absolute values:
+&nbsp;&nbsp;&nbsp; for absolute values: <br>
 &nbsp;&nbsp;&nbsp; (e.g. 560 voters)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr
