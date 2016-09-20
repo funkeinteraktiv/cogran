@@ -38,19 +38,19 @@ Note: No String datatypes are allowed for attribute values (use Int or Real inst
 &nbsp; weights the attribute value by the area of intersection between source and target file
 
 &nbsp;&nbsp;&nbsp; for absolute values: <br>
-&nbsp;&nbsp;&nbsp; (e.g. 560 voters)
+&nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr
 ```
 
-&nbsp;&nbsp;&nbsp; for relative & average values:
-&nbsp;&nbsp;&nbsp; (e.g. 20 % of all voters, 32.000 € average income, ...)
+&nbsp;&nbsp;&nbsp; for relative & average values: <br>
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr kaufkraft --mode arealWeightingAdvanced
 ```
 
-&nbsp;&nbsp;&nbsp; for relative values related to absolute values:
-&nbsp;&nbsp;&nbsp; (e.g. 20 % of 560 voters)
+&nbsp;&nbsp;&nbsp; for relative values related to absolute values: <br>
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson --attr Relative --mode arealWeightingRelative -o output.geojson
 ```
@@ -58,20 +58,20 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ###&nbsp;  2. Attribute Weighting
 &nbsp; weights the attribute value by an additional attribute (e.g. population)
 
-&nbsp;&nbsp;&nbsp; for absolute values:
-&nbsp;&nbsp;&nbsp; (e.g. 560 voters)
+&nbsp;&nbsp;&nbsp; for absolute values: <br>
+&nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --weight population --mode attributeWeighting
 ```
 
-&nbsp;&nbsp;&nbsp; for relative & average values:
-&nbsp;&nbsp;&nbsp; (e.g. 20 % of all voters, 32.000 € average income, ...)
+&nbsp;&nbsp;&nbsp; for relative & average values: <br>
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr kaufkraft --weight population --mode attributeWeightingAdvanced
 ```
 
-&nbsp;&nbsp;&nbsp; for relative values related to absolute values:
-&nbsp;&nbsp;&nbsp; (e.g. 20 % of 560 voters)
+&nbsp;&nbsp;&nbsp; for relative values related to absolute values: <br>
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr Relative --weight population --mode attributeWeightingRelative -o output.geojson
 ```
@@ -82,14 +82,14 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 &nbsp; **Note: binary values have to be listed in an attribute called 'binary'**
 
-&nbsp;&nbsp;&nbsp; for absolute values:
-&nbsp;&nbsp;&nbsp; (e.g. 560 voters)
+&nbsp;&nbsp;&nbsp; for absolute values: <br>
+&nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeighting --mask test/data/base_data/binarymask.geojson
 ```
 
-&nbsp;&nbsp;&nbsp; for relative values related to absolute values:
-&nbsp;&nbsp;&nbsp; (e.g. 20 % of 560 voters)
+&nbsp;&nbsp;&nbsp; for relative values related to absolute values: <br>
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Relative --mode binaryDasymetricWeightingRelative --mask test/data/base_data/binarymask.geojson
 ```
@@ -100,14 +100,14 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 &nbsp; **Note: percentage values have to be listed in an attribute called 'prozent'**
 
-&nbsp;&nbsp;&nbsp; for absolute values:
-&nbsp;&nbsp;&nbsp; (e.g. 560 voters)
+&nbsp;&nbsp;&nbsp; for absolute values: <br>
+&nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeighting --mask test/data/base_data/nclassmask.geojson
 ```
 
-&nbsp;&nbsp;&nbsp; for relative values related to absolute values:
-&nbsp;&nbsp;&nbsp; (e.g. 20 % of 560 voters)
+&nbsp;&nbsp;&nbsp; for relative values related to absolute values: <br>
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Relative --mode nClassDasymetricWeightingRelative --mask test/data/base_data/nclassmask.geojson
 ```
@@ -116,8 +116,8 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 &nbsp; a linear correlation between an independent variable (e.g. area size) and a dependent variable (the attribute value) is used to  
 &nbsp; estimate the attribute value
 
-&nbsp;&nbsp;&nbsp; for absolute values:
-&nbsp;&nbsp;&nbsp; (e.g. 560 voters)
+&nbsp;&nbsp;&nbsp; for absolute values: <br>
+&nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode linearRegression --mask test/data/base_data/nclassmask.geojson
 ```
