@@ -4,6 +4,7 @@ CoGran - A command line tool for combining data of different spatial granularity
   
   
 **Note: Project is still under development.**
+
   
   
 ## Installation
@@ -31,7 +32,8 @@ $ npm link
 
 
 
-Note: No String datatypes are allowed for attribute values (use Int or Real instead)
+Note: No String datatypes are allowed for attribute values (use Int or Real instead) <br>
+Note: use only WGS84 as coordinate system
 
 
 ###&nbsp;  1. Simple Area Weighting
@@ -112,9 +114,11 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Relative --mode nClassDasymetricWeightingRelative --mask test/data/base_data/nclassmask.geojson
 ```
 
-###&nbsp;  5. Linear Regression
+###&nbsp;  5. Linear Regression - in progress
 &nbsp; a linear correlation between an independent variable (e.g. area size) and a dependent variable (the attribute value) is used to  
 &nbsp; estimate the attribute value
+
+&nbsp; **Note: additional classes have to be listed in an attribute called 'landuse'**
 
 &nbsp;&nbsp;&nbsp; for absolute values: <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
