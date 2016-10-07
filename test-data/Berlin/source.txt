@@ -1,0 +1,7 @@
+Raeumliche_Einheiten & Thematische_Daten:	http://fbinter.stadt-berlin.de/fb/index.jsp
+						https://daten.berlin.de/
+						https://www.berlin.de/polizei/verschiedenes/polizeiliche-kriminalstatistik
+						http://www.berlinhyp.de/presse/presseinformationen.html
+						https://docs.google.com/spreadsheets/d/12bt7nkEF7L5__1Ac6acqTB4hpyOBXl63cnRa2jYyCjM/edit#gid=0
+
+Masken: http://download.geofabrik.de/europe/germany/berlin.html
