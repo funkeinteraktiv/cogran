@@ -1,0 +1,3 @@
+Raeumliche_Einheiten: https://offenedaten-koeln.de/dataset
+
+Thematische_Daten: https://offenedaten-koeln.de/dataset

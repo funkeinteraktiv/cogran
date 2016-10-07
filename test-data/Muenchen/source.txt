@@ -1,0 +1,7 @@
+Raeumliche_Einheiten:
+
+Thematische_Daten:	https://www.muenchen.de/rathaus/Stadtverwaltung/Kreisverwaltungsreferat/Wahlen-und-Abstimmungen/Wahlergebnisse-Bundestagswahl.html
+			https://www.opengov-muenchen.de/group/politik-wahlen			
+			https://offenedaten.de/organization/mogdy
+
+CORINE Landcover:	http://sg.geodatenzentrum.de/wfs_clc10_2012

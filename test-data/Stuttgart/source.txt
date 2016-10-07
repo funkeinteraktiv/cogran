@@ -1,0 +1,3 @@
+Raeumliche_Einheiten: 	https://www.stuttgart.de/wahldaten
+
+Thematische_Daten: http://www.stuttgart.de/item/show/558957

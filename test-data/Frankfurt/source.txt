@@ -1,0 +1,5 @@
+Maske: http://sg.geodatenzentrum.de/wfs_clc10_2012
+
+Raeumliche_Einheiten: http://www.offenedaten.frankfurt.de/dataset/wahlatlas-2015-geodaten
+
+Thematische_Daten: http://www.offenedaten.frankfurt.de/dataset

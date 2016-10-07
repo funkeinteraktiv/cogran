@@ -1,0 +1,5 @@
+Masken: http://suche.transparenz.hamburg.de/?esq_not_all_versions=true&groups=geografie-geologie-und-geodaten&q=&sort=publishing_date+desc%2Ctitle_sort+asc&esq_not_all_versions=true
+
+Raeumliche_Einheiten: http://suche.transparenz.hamburg.de/?esq_not_all_versions=true&groups=geografie-geologie-und-geodaten&q=&sort=publishing_date+desc%2Ctitle_sort+asc&esq_not_all_versions=true
+
+Thematische_Daten: http://www.statistik-nord.de/daten/?type=0
