@@ -3,5 +3,6 @@ Raeumliche_Einheiten & Thematische_Daten:	http://fbinter.stadt-berlin.de/fb/inde
 						https://www.berlin.de/polizei/verschiedenes/polizeiliche-kriminalstatistik
 						http://www.berlinhyp.de/presse/presseinformationen.html
 						https://docs.google.com/spreadsheets/d/12bt7nkEF7L5__1Ac6acqTB4hpyOBXl63cnRa2jYyCjM/edit#gid=0
+						https://www.statistik-berlin-brandenburg.de/Statistiken/statistik_OT.asp?Ptyp=600&Sageb=12041&creg=BBB&anzwer=10
 
 Masken: http://download.geofabrik.de/europe/germany/berlin.html

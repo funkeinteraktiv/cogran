@@ -1,4 +1,6 @@
-Raeumliche_Einheiten:
+Raeumliche_Einheiten:	http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=0&gdz_user_id=0
+			https://www.suche-postleitzahl.org/muenchen-plz-80331-85540.52bb#
+			https://opendata.bayern.de/detailansicht/datensatz/verwaltungsgebiete;jsessionid=5A76334E2BA21E881857063A5B2A26A7?0
 
 Thematische_Daten:	https://www.muenchen.de/rathaus/Stadtverwaltung/Kreisverwaltungsreferat/Wahlen-und-Abstimmungen/Wahlergebnisse-Bundestagswahl.html
 			https://www.opengov-muenchen.de/group/politik-wahlen			
