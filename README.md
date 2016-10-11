@@ -53,8 +53,9 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 &nbsp;&nbsp;&nbsp; for relative values related to absolute values: <br>
 &nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*)
+&nbsp;&nbsp;&nbsp; **Note: (dis)aggregating attribute has to be listed in an attribute called 'Aggr'**
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson --attr Relative --mode arealWeightingRelative -o output.geojson
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson --attr RelativeValue --mode arealWeightingRelative -o output.geojson
 ```
 
 ###&nbsp;  2. Attribute Weighting
