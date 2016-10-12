@@ -76,7 +76,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 &nbsp;&nbsp;&nbsp; for relative values related to absolute values: <br>
 &nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*)
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr Relative --weight population --mode attributeWeightingRelative -o output.geojson
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr RelativeValue --weight population --mode attributeWeightingRelative -o output.geojson
 ```
 
 ###&nbsp;  3. Binary Dasymetric Weighting
