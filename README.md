@@ -60,7 +60,8 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ```
 
 ###&nbsp;  2. Attribute Weighting
-&nbsp; weights the attribute value by an additional attribute (e.g. population)
+&nbsp; weights the attribute value by an additional attribute of the target file (e.g. population) <br>
+&nbsp; ![AttributeWeighting](http://i.imgur.com/Zz4rT06.png)
 
 &nbsp;&nbsp;&nbsp; for absolute values: <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
