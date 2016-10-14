@@ -32,12 +32,13 @@ $ npm link
 
 
 
-Note: No String datatypes are allowed for attribute values (use Int or Real instead) <br>
-Note: use only WGS84 as coordinate system
+**Note: No String datatypes are allowed for attribute values (use Int or Real instead)** <br>
+**Note: use only WGS84 as coordinate system**
 
 
 ###&nbsp;  1. Simple Area Weighting
-&nbsp; weights the attribute value by the area of intersection between source and target file
+&nbsp; weights the attribute value by the area of intersection between source and target file <br>
+&nbsp; ![SimpleAreaWeighting](http://i.imgur.com/yeiuNs3.png)
 
 &nbsp;&nbsp;&nbsp; for absolute values: <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
@@ -59,7 +60,8 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ```
 
 ###&nbsp;  2. Attribute Weighting
-&nbsp; weights the attribute value by an additional attribute (e.g. population)
+&nbsp; weights the attribute value by an additional attribute of the target file (e.g. population) <br>
+&nbsp; ![AttributeWeighting](http://i.imgur.com/Zz4rT06.png)
 
 &nbsp;&nbsp;&nbsp; for absolute values: <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
@@ -82,7 +84,8 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 ###&nbsp;  3. Binary Dasymetric Weighting
 &nbsp; additional control zones classified by binary values [0; 1] are used to mask out areas [0] where the attribute does not occur  
-&nbsp; (e.g. uninhabited areas)
+&nbsp; (e.g. uninhabited areas)<br>
+&nbsp; ![BinaryDasymetricWeighting](http://i.imgur.com/3YenQYC.png)
 
 &nbsp; **Note: binary values have to be listed in an attribute called 'binary'**
 
