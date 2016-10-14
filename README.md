@@ -32,12 +32,13 @@ $ npm link
 
 
 
-Note: No String datatypes are allowed for attribute values (use Int or Real instead) <br>
-Note: use only WGS84 as coordinate system
+**Note: No String datatypes are allowed for attribute values (use Int or Real instead)** <br>
+**Note: use only WGS84 as coordinate system**
 
 
 ###&nbsp;  1. Simple Area Weighting
-&nbsp; weights the attribute value by the area of intersection between source and target file
+&nbsp; weights the attribute value by the area of intersection between source and target file <br>
+![SimpleAreaWeighting](/Z:/CoGran/Grafiken/ArealWeighting.png)
 
 &nbsp;&nbsp;&nbsp; for absolute values: <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
