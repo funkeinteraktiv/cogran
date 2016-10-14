@@ -38,7 +38,7 @@ $ npm link
 
 ###&nbsp;  1. Simple Area Weighting
 &nbsp; weights the attribute value by the area of intersection between source and target file <br>
-![SimpleAreaWeighting](/Z:/CoGran/Grafiken/ArealWeighting.png)
+&nbsp; ![SimpleAreaWeighting](/Grafiken/ArealWeighting.png)
 
 &nbsp;&nbsp;&nbsp; for absolute values: <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
