@@ -103,7 +103,8 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 ###&nbsp;  4. N-Class Dasymetric Weighting
 &nbsp; additional control zones classified by n classes (e.g. land use) are used to weight the attribute value by its percentage values  
-&nbsp; within the control zones
+&nbsp; within the control zones<br>
+&nbsp; ![NClassDasymetricWeighting](http://i.imgur.com/5SVLqrF.png)
 
 &nbsp; **Note: percentage values have to be listed in an attribute called 'prozent'**
 
