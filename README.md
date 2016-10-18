@@ -38,7 +38,7 @@ $ npm link
 
 ###&nbsp;  1. Simple Area Weighting
 &nbsp; weights the attribute value by the area of intersection between source and target file <br>
-&nbsp; ![SimpleAreaWeighting](http://i.imgur.com/yeiuNs3.png)
+&nbsp; ![SimpleAreaWeighting](http://i.imgur.com/aZevDoT.png)
 
 &nbsp;&nbsp;&nbsp; for absolute values: <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
@@ -61,7 +61,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 ###&nbsp;  2. Attribute Weighting
 &nbsp; weights the attribute value by an additional attribute of the target file (e.g. population) <br>
-&nbsp; ![AttributeWeighting](http://i.imgur.com/Zz4rT06.png)
+&nbsp; ![AttributeWeighting](http://i.imgur.com/v4xjVJG.png)
 
 &nbsp;&nbsp;&nbsp; for absolute values: <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
@@ -85,7 +85,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ###&nbsp;  3. Binary Dasymetric Weighting
 &nbsp; additional control zones classified by binary values [0; 1] are used to mask out areas [0] where the attribute does not occur  
 &nbsp; (e.g. uninhabited areas)<br>
-&nbsp; ![BinaryDasymetricWeighting](http://i.imgur.com/3YenQYC.png)
+&nbsp; ![BinaryDasymetricWeighting](http://i.imgur.com/JWXB7Pf.png)
 
 &nbsp; **Note: binary values have to be listed in an attribute called 'binary'**
 
@@ -104,7 +104,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ###&nbsp;  4. N-Class Dasymetric Weighting
 &nbsp; additional control zones classified by n classes (e.g. land use) are used to weight the attribute value by its percentage values  
 &nbsp; within the control zones<br>
-&nbsp; ![NClassDasymetricWeighting](http://i.imgur.com/5SVLqrF.png)
+&nbsp; ![NClassDasymetricWeighting](http://i.imgur.com/nVlN8a9.png)
 
 &nbsp; **Note: percentage values have to be listed in an attribute called 'prozent'**
 
@@ -122,7 +122,8 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 ###&nbsp;  5. Linear Regression - in progress
 &nbsp; a linear correlation between an independent variable (e.g. area size) and a dependent variable (the attribute value) is used to  
-&nbsp; estimate the attribute value
+&nbsp; estimate the attribute value<br>
+&nbsp; ![LinearRegression](http://i.imgur.com/mvkebzS.png)
 
 &nbsp; **Note: additional classes have to be listed in an attribute called 'landuse'**
 
