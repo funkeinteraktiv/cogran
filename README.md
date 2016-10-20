@@ -38,7 +38,7 @@ $ npm link
 
 ###&nbsp;  1. Simple Area Weighting
 &nbsp; weights the attribute value by the area of intersection between source and target file <br>
-&nbsp; ![SimpleAreaWeighting](http://i.imgur.com/aZevDoT.png)
+![SimpleAreaWeighting](http://i.imgur.com/aZevDoT.png)
 
 &nbsp;&nbsp;&nbsp; for absolute values: <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
@@ -53,7 +53,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ```
 
 &nbsp;&nbsp;&nbsp; for relative values related to absolute values: <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*) <br>
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*)<br>
 &nbsp;&nbsp;&nbsp; **Note: (dis)aggregating attribute has to be listed in an attribute called 'Aggr'**
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson --attr RelativeValue --mode arealWeightingRelative -o output.geojson
@@ -70,14 +70,14 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ```
 
 &nbsp;&nbsp;&nbsp; for relative & average values: <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...) <br>
-&nbsp;&nbsp;&nbsp; **Note: (dis)aggregating attribute has to be listed in an attribute called 'Aggr'**
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr kaufkraft --weight population --mode attributeWeightingAdvanced
 ```
 
 &nbsp;&nbsp;&nbsp; for relative values related to absolute values: <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*)
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*) <br>
+&nbsp;&nbsp;&nbsp; **Note: (dis)aggregating attribute has to be listed in an attribute called 'Aggr'**
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr RelativeValue --weight population --mode attributeWeightingRelative -o output.geojson
 ```
@@ -96,9 +96,10 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ```
 
 &nbsp;&nbsp;&nbsp; for relative values related to absolute values: <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*)
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*) <br>
+&nbsp;&nbsp;&nbsp; **Note: (dis)aggregating attribute has to be listed in an attribute called 'Aggr'**
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Relative --mode binaryDasymetricWeightingRelative --mask test/data/base_data/binarymask.geojson
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr RelativeValue --mode binaryDasymetricWeightingRelative --mask test/data/base_data/binarymask.geojson
 ```
 
 ###&nbsp;  4. N-Class Dasymetric Weighting
@@ -109,7 +110,8 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 &nbsp; **Note: percentage values have to be listed in an attribute called 'prozent'**
 
 &nbsp;&nbsp;&nbsp; for absolute values: <br>
-&nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
+&nbsp;&nbsp;&nbsp; (e.g. *560 voters*) <br>
+&nbsp;&nbsp;&nbsp; **Note: (dis)aggregating attribute has to be listed in an attribute called 'Aggr'**
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeighting --mask test/data/base_data/nclassmask.geojson
 ```
@@ -120,12 +122,13 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Relative --mode nClassDasymetricWeightingRelative --mask test/data/base_data/nclassmask.geojson
 ```
 
-###&nbsp;  5. Linear Regression - in progress
+###&nbsp;  5. Linear Regression
 &nbsp; a linear correlation between an independent variable (e.g. area size) and a dependent variable (the attribute value) is used to  
 &nbsp; estimate the attribute value<br>
-&nbsp; ![LinearRegression](http://i.imgur.com/mvkebzS.png)
+&nbsp; ![LinearRegression](http://i.imgur.com/5nytPLB.png)
 
-&nbsp; **Note: additional classes have to be listed in an attribute called 'landuse'**
+&nbsp; **Note: additional classes have to be listed in an attribute called 'landuse'**<br>
+&nbsp; ...and please note that negative attribute values may result due to missing endpoints of linear regression line<br>
 
 &nbsp;&nbsp;&nbsp; for absolute values: <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
@@ -159,8 +162,7 @@ $ npm test
 
 ## Todos
 
-* [ ] Linear Regression
-* [ ] Linear Regression Relative
+* [ ] 
 
 ## Dependencies
 
