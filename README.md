@@ -120,12 +120,13 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Relative --mode nClassDasymetricWeightingRelative --mask test/data/base_data/nclassmask.geojson
 ```
 
-###&nbsp;  5. Linear Regression - in progress
+###&nbsp;  5. Linear Regression
 &nbsp; a linear correlation between an independent variable (e.g. area size) and a dependent variable (the attribute value) is used to  
 &nbsp; estimate the attribute value<br>
-&nbsp; ![LinearRegression](http://i.imgur.com/mvkebzS.png)
+&nbsp; ![LinearRegression](http://i.imgur.com/5nytPLB.png)
 
-&nbsp; **Note: additional classes have to be listed in an attribute called 'landuse'**
+&nbsp; **Note: additional classes have to be listed in an attribute called 'landuse'**<br>
+&nbsp; ...and please note that negative attribute values may result due to missing endpoints of linear regression line<br>
 
 &nbsp;&nbsp;&nbsp; for absolute values: <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
@@ -159,8 +160,7 @@ $ npm test
 
 ## Todos
 
-* [ ] Linear Regression
-* [ ] Linear Regression Relative
+* [ ] 
 
 ## Dependencies
 
