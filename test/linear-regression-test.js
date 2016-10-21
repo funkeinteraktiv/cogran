@@ -14,13 +14,13 @@ const Config = {
     mode: 'linearRegression'
   },
 
-  hierarch_rel: {
+ /* hierarch_rel: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
-    attr: 'Aggr_rel',
+    attr: 'Relative',
     mask: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
     mode: 'linearRegression'
-  },
+  }, */
 
   nonHierarch_abs: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
@@ -30,13 +30,13 @@ const Config = {
     mode: 'linearRegression'
   },
 
-  nonHierarch_rel: {
+ /* nonHierarch_rel: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_nonhierarchical.geojson'),
-    attr: 'Aggr_rel',
+    attr: 'Relative',
     mask: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
     mode: 'linearRegression'
-  }
+  } */
 }
 
 describe('linear regression [hierarchical, absolute]', () => {
@@ -58,15 +58,15 @@ describe('linear regression [hierarchical, absolute]', () => {
     });
 
     it('should calculate the output values correctly',() => {
-      Expect(outputData.features[0].properties[Config.hierarch_abs.attr]).toBeGreaterThan(16).toBeLessThan(17);
-      Expect(outputData.features[1].properties[Config.hierarch_abs.attr]).toBeGreaterThan(56).toBeLessThan(57);
+      Expect(outputData.features[0].properties[Config.hierarch_abs.attr]).toBeGreaterThan(16.5).toBeLessThan(16.6);
+      Expect(outputData.features[1].properties[Config.hierarch_abs.attr]).toBeGreaterThan(56.5).toBeLessThan(56.6);
     });
 
   });
 
 });
 
-describe('linear regression [hierarchical, relative]', () => {
+/*describe('linear regression [hierarchical, relative]', () => {
 
   describe('output data', () => {
 
@@ -91,7 +91,7 @@ describe('linear regression [hierarchical, relative]', () => {
 
   });
 
-});
+}); */
 
 describe('linear regression [nonhierarchical, absolute]', () => {
 
@@ -112,15 +112,15 @@ describe('linear regression [nonhierarchical, absolute]', () => {
     });
 
     it('should calculate the output values correctly',() => {
-      Expect(outputData.features[0].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(4).toBeLessThan(5);
-      Expect(outputData.features[1].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(60).toBeLessThan(61);
+      Expect(outputData.features[0].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(4.2).toBeLessThan(4.3);
+      Expect(outputData.features[1].properties[Config.nonHierarch_abs.attr]).toBeGreaterThan(60.4).toBeLessThan(60.5);
     });
 
   });
 
 });
 
-describe('linear regression [nonhierarchical, relative]', () => {
+/*describe('linear regression [nonhierarchical, relative]', () => {
 
   describe('output data', () => {
 
@@ -145,4 +145,4 @@ describe('linear regression [nonhierarchical, relative]', () => {
 
   });
 
-});
+}); */
