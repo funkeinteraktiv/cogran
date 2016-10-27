@@ -31,8 +31,6 @@ $ npm link
 ## Usage Examples
 
 
-
-**Note: No String datatypes are allowed for attribute values (use Int or Real instead)** <br>
 **Note: use only WGS84 as coordinate system**
 
 
@@ -143,7 +141,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 You can specify these cli options:
 
 * **--disaggregate, -d** - Use (dis)aggregate mode
-* **--mode, -m** - Possible values: arealWeightingAdvanced, arealWeightingRelative, attributeWeighting, attributeWeightingAdvanced, attributeWeightingRelative, binaryDasymetricWeighting, binaryDasymetricWeightingRealative, nClassDasymetricWeighting, nClassDasymetricWeightingRelative, linearRegression
+* **--mode, -m** - Possible values: arealWeightingAdvanced, arealWeightingRelative, attributeWeighting, attributeWeightingAdvanced, attributeWeightingRelative, binaryDasymetricWeighting, binaryDasymetricWeightingRelative, nClassDasymetricWeighting, nClassDasymetricWeightingRelative, linearRegression
 * **--input, -i** - The path of the input geojson that will be used for aggregation/disaggregation
 * **--target, -t** - The path of the target geojson
 * **--output, -o** - The path of the output geojson
