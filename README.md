@@ -100,24 +100,21 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ```
 
 ###&nbsp;  5. Linear Regression
-&nbsp; a linear correlation between an independent variable (e.g. area size) and a dependent variable (the attribute value) is used to  
-&nbsp; estimate the attribute value<br>
+&nbsp; a linear correlation between an independent variable (e.g. area size) and a dependent variable (the attribute value) is used to estimate the attribute value<br>
 &nbsp; ![LinearRegression](http://i.imgur.com/5nytPLB.png)
 
 &nbsp; **Note: additional classes have to be listed in an attribute called 'landuse'**<br>
 &nbsp; ...and please note that negative attribute values may result due to missing endpoints of linear regression line<br>
 
-&nbsp;&nbsp;&nbsp; for absolute values: <br>
+&nbsp;&nbsp;&nbsp; **for absolute values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode linearRegression --mask test/data/base_data/nclassmask.geojson
 ```
 
-
-
 ## Options
 
-You can specify these options (you can also see the options if you run CoGran:
+You can specify these options (you can also see the options if you run CoGran):
 
 ```
 $ cogran
@@ -146,3 +143,6 @@ $ npm test
 
 * decrease runtime for calculations 
 
+## Credits
+
+* HCU HafenCity Universität Hamburg, Berliner Morgenpost. Unterstützt von der Volkswagen-Stiftung
