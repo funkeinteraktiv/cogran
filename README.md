@@ -46,7 +46,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 &nbsp;&nbsp;&nbsp; **for relative & average values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr kaufkraft --mode arealWeightingAdvanced
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr kaufkraft --mode arealWeightingRelative
 ```
 
 ###&nbsp;  2. Attribute Weighting
@@ -62,24 +62,23 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 &nbsp;&nbsp;&nbsp; for **relative & average values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr kaufkraft --weight population --mode attributeWeightingAdvanced
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr kaufkraft --weight population --mode attributeWeightingRelative
 ```
 
 ###&nbsp;  3. Binary Dasymetric Weighting
-&nbsp; additional control zones are used to mask out areas. (e.g. inhabited areas) <br>
+&nbsp; additional control zones are used to mask out areas. Polygons (e.g. inhabited areas) get binary value [1]<br>
 &nbsp; ![BinaryDasymetricWeighting](http://i.imgur.com/JWXB7Pf.png)
 
-&nbsp;&nbsp;&nbsp; for absolute values: <br>
+&nbsp;&nbsp;&nbsp; **for absolute values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeighting --mask test/data/base_data/binarymask.geojson
 ```
 
-&nbsp;&nbsp;&nbsp; for relative values related to absolute values: <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*) <br>
-&nbsp;&nbsp;&nbsp; **Note: (dis)aggregating attribute has to be listed in an attribute called 'Aggr'**
+&nbsp;&nbsp;&nbsp; for **relative & average values:** <br>
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr RelativeValue --mode binaryDasymetricWeightingRelative --mask test/data/base_data/binarymask.geojson
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeightingRelative --mask test/data/base_data/binarymask.geojson
 ```
 
 ###&nbsp;  4. N-Class Dasymetric Weighting
