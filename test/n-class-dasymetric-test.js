@@ -85,8 +85,8 @@ describe('nclass dasymetric weighting [hierarchical, relative]', () => {
     });
 
     it('should calculate the ouput values correctly',() => {
-      Expect(outputData.features[0].properties[Config.hierarch_rel.attr]).toBeGreaterThan(4.3).toBeLessThan(4.4);
-      Expect(outputData.features[1].properties[Config.hierarch_rel.attr]).toBeGreaterThan(15.2).toBeLessThan(15.3);
+      Expect(outputData.features[0].properties[Config.hierarch_rel.attr]).toBeGreaterThan(15.88).toBeLessThan(15.9);
+      Expect(outputData.features[1].properties[Config.hierarch_rel.attr]).toBeGreaterThan(36.91).toBeLessThan(36.92);
     });
 
   });
