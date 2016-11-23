@@ -14,7 +14,7 @@
                 "BezName": "Mitte",
                 "FlaecheKM2": 39.449151,
                 "Einwohner": 368122,
-                "gebBER": 0
+                "geb_BER": 124550.9991910501
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -4381,7 +4381,7 @@
                 "BezName": "Friedrichshain-Kreuzberg",
                 "FlaecheKM2": 20.388503,
                 "Einwohner": 281076,
-                "gebBER": 0
+                "geb_BER": 94652.04967103619
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -7416,7 +7416,7 @@
                 "BezName": "Pankow",
                 "FlaecheKM2": 103.093706,
                 "Einwohner": 394816,
-                "gebBER": 0
+                "geb_BER": 175974.9791890402
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -15979,7 +15979,7 @@
                 "BezName": "Charlottenburg-Wilmersdorf",
                 "FlaecheKM2": 64.663676,
                 "Einwohner": 334351,
-                "gebBER": 0
+                "geb_BER": 132143.00331302488
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -22238,7 +22238,7 @@
                 "BezName": "Spandau",
                 "FlaecheKM2": 91.836878,
                 "Einwohner": 238278,
-                "gebBER": 0
+                "geb_BER": 126731.95694406859
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -27785,7 +27785,7 @@
                 "BezName": "Steglitz-Zehlendorf",
                 "FlaecheKM2": 102.515171,
                 "Einwohner": 302535,
-                "gebBER": 0
+                "geb_BER": 151525.95397274994
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -32268,7 +32268,7 @@
                 "BezName": "Tempelhof-SchÃ¶neberg",
                 "FlaecheKM2": 53.023657,
                 "Einwohner": 345024,
-                "gebBER": 0
+                "geb_BER": 164219.0333011183
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -35935,7 +35935,7 @@
                 "BezName": "NeukÃ¶lln",
                 "FlaecheKM2": 44.908348,
                 "Einwohner": 328045,
-                "gebBER": 0
+                "geb_BER": 156412.0636476528
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -39226,7 +39226,7 @@
                 "BezName": "Treptow-KÃ¶penick",
                 "FlaecheKM2": 167.63152,
                 "Einwohner": 257782,
-                "gebBER": 0
+                "geb_BER": 132946.81291973477
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -47881,7 +47881,7 @@
                 "BezName": "Marzahn-Hellersdorf",
                 "FlaecheKM2": 61.78329,
                 "Einwohner": 261954,
-                "gebBER": 0
+                "geb_BER": 132235.9994014776
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -51944,7 +51944,7 @@
                 "BezName": "Lichtenberg",
                 "FlaecheKM2": 52.092292,
                 "Einwohner": 280721,
-                "gebBER": 0
+                "geb_BER": 126813.1460891483
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -56407,7 +56407,7 @@
                 "BezName": "Reinickendorf",
                 "FlaecheKM2": 89.279201,
                 "Einwohner": 260253,
-                "gebBER": 0
+                "geb_BER": 148367.00235989832
             },
             "geometry": {
                 "type": "MultiPolygon",

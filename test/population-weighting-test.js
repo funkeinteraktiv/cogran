@@ -39,7 +39,7 @@ const Config = {
   }
 }
 
-describe('population weighting [hierarchical, absolute]', () => {
+describe('attribute weighting [hierarchical, absolute]', () => {
 
   describe('output data', () => {
 
@@ -65,7 +65,7 @@ describe('population weighting [hierarchical, absolute]', () => {
 
 });
 
-describe('population weighting [hierarchical, relative]', () => {
+describe('attribute weighting [hierarchical, relative]', () => {
 
   describe('output data', () => {
 
@@ -84,8 +84,8 @@ describe('population weighting [hierarchical, relative]', () => {
     });
 
     it('should calculate the output values correctly',() => {
-      Expect(outputData.features[0].properties[Config.hierarch_rel.attr]).toBeGreaterThan(1.4).toBeLessThan(1.6);
-      Expect(outputData.features[1].properties[Config.hierarch_rel.attr]).toBeGreaterThan(30.5).toBeLessThan(30.7);
+      Expect(outputData.features[0].properties[Config.hierarch_rel.attr]).toBe(15)//.toBeLessThan(1.6);
+      Expect(outputData.features[1].properties[Config.hierarch_rel.attr]).toBe(62);
     });
 
   });
@@ -94,7 +94,7 @@ describe('population weighting [hierarchical, relative]', () => {
 
 
 
-describe('population weighting [nonhierarchical, absolute]', () => {
+describe('attribute weighting [nonhierarchical, absolute]', () => {
 
   describe('output data', () => {
 
@@ -122,7 +122,7 @@ describe('population weighting [nonhierarchical, absolute]', () => {
 });
 
 
-describe('population weighting [nonhierarchical, relative]', () => {
+describe('attribute weighting [nonhierarchical, relative]', () => {
 
   describe('output data', () => {
 
