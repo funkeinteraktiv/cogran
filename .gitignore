@@ -4,3 +4,4 @@ node_modules
 ./*.shp
 ./*.zip
 output.geojson
+yarn.lock
