@@ -4,8 +4,6 @@ CoGran - A command line tool for **co**mbining data of different spatial **gran*
 
 **Note: Project is still under development.**
 
-
-
 ## Installation
 
 To install cogran.js you need to clone the repository first.
