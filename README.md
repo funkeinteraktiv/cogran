@@ -75,30 +75,28 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeighting --mask test/data/base_data/binarymask.geojson
 ```
 
-&nbsp;&nbsp;&nbsp; for **relative & average values:** <br>
+&nbsp;&nbsp;&nbsp; **for relative & average values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeightingRelative --mask test/data/base_data/binarymask.geojson
 ```
 
 ###&nbsp;  4. N-Class Dasymetric Weighting
-&nbsp; additional control zones with percentage values of an attribute (e.g. population share) are used to weight the input attribute
-&nbsp; within the control zones<br>
+&nbsp; additional control zones with percentage values of an attribute (e.g. population share) are used to weight the input attribute<br>
 &nbsp; ![NClassDasymetricWeighting](http://i.imgur.com/nVlN8a9.png)
 
-&nbsp; **Note: percentage values have to be listed in an attribute called 'prozent'**
+&nbsp; **Note: percentage values have to be listed in an attribute called 'percentage'**
 
-&nbsp;&nbsp;&nbsp; for absolute values: <br>
+&nbsp;&nbsp;&nbsp; **for absolute values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*) <br>
-&nbsp;&nbsp;&nbsp; **Note: (dis)aggregating attribute has to be listed in an attribute called 'Aggr'**
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeighting --mask test/data/base_data/nclassmask.geojson
 ```
 
-&nbsp;&nbsp;&nbsp; for relative values related to absolute values: <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*)
+&nbsp;&nbsp;&nbsp; **for relative & average values:** <br>
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Relative --mode nClassDasymetricWeightingRelative --mask test/data/base_data/nclassmask.geojson
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeightingRelative --mask test/data/base_data/nclassmask.geojson
 ```
 
 ###&nbsp;  5. Linear Regression
@@ -119,7 +117,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 ## Options
 
-You can specify these cli options (you can also see the options if you run CoGran:
+You can specify these options (you can also see the options if you run CoGran:
 
 ```
 $ cogran
