@@ -1,7 +1,6 @@
 # cogran.js
 
-CoGran - A command line tool for combining data of different spatial granularity  
-  
+CoGran - A command line tool for COmbining data of different spatial GRANularity  
   
 **Note: Project is still under development.**
 
@@ -9,20 +8,20 @@ CoGran - A command line tool for combining data of different spatial granularity
   
 ## Installation
 
-To install the cli you need to clone the repository first.
+To install cogran.js you need to clone the repository first.
 
 ```
 $ git clone https://github.com/berlinermorgenpost/cogran.git
 ```
 
-Now you need to install all dependencies for the application.
+Now you have to install all dependencies for the application. You need node.js 5.0 or higher.
 
 ```
 $ cd /path/to/cogran
 $ npm install
 ```
 
-Using the link command, we install cogran globally:
+Using the link command, we install cogran globally, so that you can run it from every folder:
 
 ```
 $ npm link
@@ -138,18 +137,23 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 
 ## Options
 
-You can specify these cli options:
+You can specify these cli options (you can also see the options if you run CoGran:
+
+```
+$ cogran
+```
 
 * **--disaggregate, -d** - Use (dis)aggregate mode
-* **--mode, -m** - Possible values: arealWeightingAdvanced, arealWeightingRelative, attributeWeighting, attributeWeightingAdvanced, attributeWeightingRelative, binaryDasymetricWeighting, binaryDasymetricWeightingRelative, nClassDasymetricWeighting, nClassDasymetricWeightingRelative, linearRegression
-* **--input, -i** - The path of the input geojson that will be used for aggregation/disaggregation
-* **--target, -t** - The path of the target geojson
-* **--output, -o** - The path of the output geojson
+* **--input, -i** - path and name of the input geojson that will be used for aggregation/disaggregation
+* **--target, -t** - path and name of the target geojson
+* **--output, -o** - path and name of the output geojson
 * **--attr** - The attribute that will be used
+* **--mode, -m** - Possible values: arealWeightingAdvanced, arealWeightingRelative, attributeWeighting, attributeWeightingAdvanced, attributeWeightingRelative, binaryDasymetricWeighting, binaryDasymetricWeightingRelative, nClassDasymetricWeighting, nClassDasymetricWeightingRelative, linearRegression
+* **--mask** - path and name of the geojson with ancillary information
 * **--weight** - The attribute from target geojson that is used for weighting
+
 * **--verbose** - Maximum log level
 * **--silent** - disable logging
-
 
 ## Tests
 
@@ -162,6 +166,3 @@ $ npm test
 
 * [ ] 
 
-## Dependencies
-
-* node.js 5.0 or higher
