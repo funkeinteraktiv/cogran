@@ -44,7 +44,7 @@ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/t
 ```
 
 &nbsp;&nbsp;&nbsp; **for relative & average values:** <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 � average income*, ...)
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
 cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr income --mode arealWeightingRelative
 ```
@@ -60,7 +60,7 @@ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/t
 ```
 
 &nbsp;&nbsp;&nbsp; for **relative & average values:** <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 � average income*, ...)
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
 cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr income --weight population --mode attributeWeightingRelative
 ```
@@ -76,7 +76,7 @@ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/t
 ```
 
 &nbsp;&nbsp;&nbsp; **for relative & average values:** <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 � average income*, ...)
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
 cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeightingRelative --mask test/data/base_data/binarymask.geojson
 ```
@@ -94,7 +94,7 @@ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/t
 ```
 
 &nbsp;&nbsp;&nbsp; **for relative & average values:** <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 � average income*, ...)
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
 cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeightingRelative --mask test/data/base_data/nclassmask.geojson
 ```
@@ -135,4 +135,4 @@ cogran
 
 ## Credits
 
-* HCU HafenCity Universit�t Hamburg, Berliner Morgenpost. Unterst�tzt von der Volkswagen-Stiftung
+* HCU HafenCity Universität Hamburg, Berliner Morgenpost. Unterstützt von der Volkswagen-Stiftung

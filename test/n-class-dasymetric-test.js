@@ -17,9 +17,9 @@ const Config = {
   hierarch_rel: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
-    attr: 'Aggr_rel',
+    attr: 'Aggr',
     mask: Path.resolve(__dirname, 'data/base_data/nclassmask.geojson'),
-    mode: 'nClassDasymetricWeighting'
+    mode: 'nClassDasymetricWeightingRelative'
   },
 
   nonHierarch_abs: {

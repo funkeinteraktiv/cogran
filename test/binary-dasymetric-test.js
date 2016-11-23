@@ -85,8 +85,8 @@ describe('binary dasymetric weighting [hierarchical, relative]', () => {
     });
 
     it('should calculate the output values correctly',() => {
-      Expect(outputData.features[0].properties[Config.hierarch_rel.attr]).toBeGreaterThan(1.4).toBeLessThan(1.6);
-      Expect(outputData.features[1].properties[Config.hierarch_rel.attr]).toBeGreaterThan(12.5).toBeLessThan(12.7);
+      Expect(outputData.features[0].properties[Config.hierarch_rel.attr]).toBeGreaterThan(5.19).toBeLessThan(5.2);
+      Expect(outputData.features[1].properties[Config.hierarch_rel.attr]).toBeGreaterThan(4.86).toBeLessThan(4.9);
     });
 
   });
@@ -143,7 +143,7 @@ describe('binary dasymetric weighting [nonhierarchical, relative]', () => {
 
     it('should calculate the output values correctly',() => {
       Expect(outputData.features[0].properties[Config.nonHierarch_rel.attr]).toBe(0);
-      Expect(outputData.features[1].properties[Config.nonHierarch_rel.attr]).toBeGreaterThan(3.4).toBeLessThan(3.5);
+      Expect(outputData.features[1].properties[Config.nonHierarch_rel.attr]).toBeGreaterThan(1.99).toBeLessThan(2);
     });
 
   });
