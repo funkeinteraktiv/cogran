@@ -6,7 +6,7 @@ const Aggregate = require('../lib/areal-interpolate');
 const FileLoader = require('../lib/fileloader');
 
 const Config = {
-  basic: { 
+  basic: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
     attr: 'Aggr'
@@ -20,27 +20,27 @@ describe('areal interpolation [general]', () => {
     let returnValue;
 
     beforeEach((cb) => {
-      
+
       Aggregate(Config.basic, (res) => {
         returnValue = res;
         cb();
       });
-    
+
     });
 
 
     it('should be an object', () => {
-      
+
       Expect(typeof returnValue).toBe('object');
-    
+
     });
 
     it('should be a geojson feature collection', () => {
-      
+
       Expect(returnValue.type).toBe('FeatureCollection');
-    
+
     });
-  
+
   });
 
   describe('output data', () => {
@@ -67,7 +67,7 @@ describe('areal interpolation [general]', () => {
     });
 
     it('should inherit the attribute that is aggregated',() => {
-      
+
       Expect(typeof outputData.features[0].properties[Config.basic.attr]).toBe('number');
 
     });

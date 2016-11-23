@@ -9,7 +9,6 @@
 * The entry point of the application. Parses user arguments and executes the desired code.
 */
 const Optimist = require('optimist');
-const Aggregate = require('./lib/aggregate');
 const ArealInterpolate = require('./lib/areal-interpolate');
 const FileWriter = require('./lib/filewriter');
 const Pckg = require('./package.json');
@@ -18,32 +17,36 @@ const Logger = require('./lib/logger');
 
 let argv = Optimist
   .usage('Usage: cogran --input <input_shape.shp> --target <target_shape.shp> --output <output_shape.shp> --attr <attribute_name>')
+  .options('d', {
+    describe: 'Use (dis)aggregate mode'
+  })
   .options('i', {
     alias: 'input',
-    describe: 'The input shapefile that will be used for aggregation/disaggregation',
+    describe: 'path and name of the input geojson that will be used for aggregation/disaggregation',
     demand: true
   })
   .options('t', {
     alias: 'target',
-    describe: 'The path of the target shapefile',
+    describe: 'path and name of the target geojson',
     demand: true
   })
   .options('o', {
     alias: 'output',
-    describe: 'The path of the output zip file'
+    describe: 'path and name of the output geojson'
   })
   .options('attr', {
     describe: 'The attribute that will be used',
     demand: true
   })
-  .options('verbose', {
-    describe: 'Log debug information to the console'
+  .options('m', {
+    alias: 'mode',
+    describe: 'Possible values: arealWeightingAdvanced, arealWeightingRelative, attributeWeighting, attributeWeightingAdvanced, attributeWeightingRelative, binaryDasymetricWeighting, binaryDasymetricWeightingRelative, nClassDasymetricWeighting, nClassDasymetricWeightingRelative, linearRegression'
   })
-  .options('silent', {
-    describe: 'Don\'t print anything to the console'
+  .options('mask', {
+    describe: 'path and name of the geojson with ancillary information'
   })
-  .options('examples', {
-    describe: 'List some usage examples'
+  .options('weight', {
+    describe: 'The attribute from target geojson that is used for weighting'
   })
   .check(main)
   .argv;

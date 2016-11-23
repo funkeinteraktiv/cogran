@@ -1,30 +1,30 @@
 # cogran.js
 
 CoGran - A command line tool for **co**mbining data of different spatial **gran**ularity  
-  
+
 **Note: Project is still under development.**
 
-  
-  
+
+
 ## Installation
 
 To install cogran.js you need to clone the repository first.
 
 ```
-$ git clone https://github.com/berlinermorgenpost/cogran.git
+git clone https://github.com/berlinermorgenpost/cogran.git
 ```
 
 Now you have to install all dependencies for the application. You need node.js 5.0 or higher.
 
 ```
-$ cd /path/to/cogran
-$ npm install
+cd /path/to/cogran
+npm install
 ```
 
 Using the link command, we install cogran globally, so that you can run it from every folder:
 
 ```
-$ npm link
+npm link
 ```
 
 ## Usage Examples
@@ -40,13 +40,13 @@ $ npm link
 &nbsp;&nbsp;&nbsp; **for absolute values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr
+cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr
 ```
 
 &nbsp;&nbsp;&nbsp; **for relative & average values:** <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 ï¿½ average income*, ...)
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr income --mode arealWeightingRelative
+cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr income --mode arealWeightingRelative
 ```
 
 ###&nbsp;  2. Attribute Weighting
@@ -56,13 +56,13 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 &nbsp;&nbsp;&nbsp; **for absolute values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --weight population --mode attributeWeighting
+cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --weight population --mode attributeWeighting
 ```
 
 &nbsp;&nbsp;&nbsp; for **relative & average values:** <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 ï¿½ average income*, ...)
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr income --weight population --mode attributeWeightingRelative
+cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr income --weight population --mode attributeWeightingRelative
 ```
 
 ###&nbsp;  3. Binary Dasymetric Weighting
@@ -72,13 +72,13 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 &nbsp;&nbsp;&nbsp; **for absolute values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeighting --mask test/data/base_data/binarymask.geojson
+cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeighting --mask test/data/base_data/binarymask.geojson
 ```
 
 &nbsp;&nbsp;&nbsp; **for relative & average values:** <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 ï¿½ average income*, ...)
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeightingRelative --mask test/data/base_data/binarymask.geojson
+cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode binaryDasymetricWeightingRelative --mask test/data/base_data/binarymask.geojson
 ```
 
 ###&nbsp;  4. N-Class Dasymetric Weighting
@@ -90,13 +90,13 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 &nbsp;&nbsp;&nbsp; **for absolute values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*) <br>
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeighting --mask test/data/base_data/nclassmask.geojson
+cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeighting --mask test/data/base_data/nclassmask.geojson
 ```
 
 &nbsp;&nbsp;&nbsp; **for relative & average values:** <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
+&nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 ï¿½ average income*, ...)
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeightingRelative --mask test/data/base_data/nclassmask.geojson
+cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode nClassDasymetricWeightingRelative --mask test/data/base_data/nclassmask.geojson
 ```
 
 ###&nbsp;  5. Linear Regression
@@ -109,7 +109,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 &nbsp;&nbsp;&nbsp; **for absolute values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode linearRegression --mask test/data/base_data/nclassmask.geojson
+cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --mode linearRegression --mask test/data/base_data/nclassmask.geojson
 ```
 
 ## Options
@@ -117,7 +117,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 You can specify these options (you can also see the options if you run CoGran):
 
 ```
-$ cogran
+cogran
 ```
 
 * **--disaggregate, -d** - Use (dis)aggregate mode
@@ -125,24 +125,14 @@ $ cogran
 * **--target, -t** - path and name of the target geojson
 * **--output, -o** - path and name of the output geojson
 * **--attr** - The attribute that will be used
-* **--mode, -m** - Possible values: arealWeightingAdvanced, arealWeightingRelative, attributeWeighting, attributeWeightingAdvanced, attributeWeightingRelative, binaryDasymetricWeighting, binaryDasymetricWeightingRelative, nClassDasymetricWeighting, nClassDasymetricWeightingRelative, linearRegression
+* **--mode, -m** - Possible values: arealWeightingRelative, attributeWeighting, attributeWeightingRelative, binaryDasymetricWeighting, binaryDasymetricWeightingRelative, nClassDasymetricWeighting, nClassDasymetricWeightingRelative, linearRegression
 * **--mask** - path and name of the geojson with ancillary information
 * **--weight** - The attribute from target geojson that is used for weighting
 
-* **--verbose** - Maximum log level
-* **--silent** - disable logging
-
-## Tests
-
-To run tests with mocha:
-```
-$ npm test
-```
-
 ## Todos
 
-* decrease runtime for calculations 
+* decrease runtime for calculations
 
 ## Credits
 
-* HCU HafenCity Universität Hamburg, Berliner Morgenpost. Unterstützt von der Volkswagen-Stiftung
+* HCU HafenCity Universitï¿½t Hamburg, Berliner Morgenpost. Unterstï¿½tzt von der Volkswagen-Stiftung

@@ -11,15 +11,15 @@ const Config = {
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
     attr: 'Aggr',
     weight: 'population',
-    mode: 'populationWeighting'
+    mode: 'attributeWeighting'
   },
 
   hierarch_rel: {
     input: Path.resolve(__dirname, 'data/base_data/sourcefeatures.geojson'),
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_hierarchical.geojson'),
-    attr: 'Aggr_rel',
+    attr: 'Aggr',
     weight: 'population',
-    mode: 'populationWeightingRelative'
+    mode: 'attributeWeightingRelative'
   },
 
   nonHierarch_abs: {
@@ -27,7 +27,7 @@ const Config = {
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_nonhierarchical.geojson'),
     attr: 'Aggr',
     weight: 'population',
-    mode: 'populationWeighting'
+    mode: 'attributeWeighting'
   },
 
   nonHierarch_rel: {
@@ -35,7 +35,7 @@ const Config = {
     target: Path.resolve(__dirname, 'data/base_data/targetfeatures_nonhierarchical.geojson'),
     attr: 'Aggr_rel',
     weight: 'population',
-    mode: 'populationWeightingRelative'
+    mode: 'attributeWeightingRelative'
   }
 }
 
