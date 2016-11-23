@@ -1,6 +1,6 @@
 # cogran.js
 
-CoGran - A command line tool for *co*mbining data of different spatial *gran*ularity  
+CoGran - A command line tool for **co**mbining data of different spatial **gran**ularity  
   
 **Note: Project is still under development.**
 
@@ -37,13 +37,13 @@ $ npm link
 &nbsp; weights the attribute value by the area of intersection between source and target file <br> <br>
 ![SimpleAreaWeighting](http://i.imgur.com/aZevDoT.png)
 
-&nbsp;&nbsp;&nbsp; for absolute values: <br>
+&nbsp;&nbsp;&nbsp; **for absolute values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr
 ```
 
-&nbsp;&nbsp;&nbsp; for relative & average values: <br>
+&nbsp;&nbsp;&nbsp; **for relative & average values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr kaufkraft --mode arealWeightingAdvanced
@@ -53,23 +53,16 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 &nbsp; weights the attribute value by an additional attribute of the target file (e.g. population) <br>
 &nbsp; ![AttributeWeighting](http://i.imgur.com/v4xjVJG.png)
 
-&nbsp;&nbsp;&nbsp; for absolute values: <br>
+&nbsp;&nbsp;&nbsp; **for absolute values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *560 voters*)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr Aggr --weight population --mode attributeWeighting
 ```
 
-&nbsp;&nbsp;&nbsp; for relative & average values: <br>
+&nbsp;&nbsp;&nbsp; for **relative & average values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr kaufkraft --weight population --mode attributeWeightingAdvanced
-```
-
-&nbsp;&nbsp;&nbsp; for relative values related to absolute values: <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*) <br>
-&nbsp;&nbsp;&nbsp; **Note: (dis)aggregating attribute has to be listed in an attribute called 'Aggr'**
-```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_nonhierarchical.geojson --attr RelativeValue --weight population --mode attributeWeightingRelative -o output.geojson
 ```
 
 ###&nbsp;  3. Binary Dasymetric Weighting
