@@ -1,6 +1,6 @@
 # cogran.js
 
-CoGran - A command line tool for COmbining data of different spatial GRANularity  
+CoGran - A command line tool for *co*mbining data of different spatial *gran*ularity  
   
 **Note: Project is still under development.**
 
@@ -30,7 +30,7 @@ $ npm link
 ## Usage Examples
 
 
-**Note: use only WGS84 as coordinate system**
+**Note: Only use GeoJSON files with WGS84 (EPSG: 4326) as coordinate system**
 
 
 ###&nbsp;  1. Simple Area Weighting
@@ -47,13 +47,6 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 &nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
 $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr kaufkraft --mode arealWeightingAdvanced
-```
-
-&nbsp;&nbsp;&nbsp; for relative values related to absolute values: <br>
-&nbsp;&nbsp;&nbsp; (e.g. *20 % of 560 voters*)<br>
-&nbsp;&nbsp;&nbsp; **Note: (dis)aggregating attribute has to be listed in an attribute called 'Aggr'**
-```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson --attr RelativeValue --mode arealWeightingRelative -o output.geojson
 ```
 
 ###&nbsp;  2. Attribute Weighting
@@ -164,5 +157,5 @@ $ npm test
 
 ## Todos
 
-* [ ] 
+* decrease runtime for calculations 
 
