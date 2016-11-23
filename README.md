@@ -46,7 +46,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 &nbsp;&nbsp;&nbsp; **for relative & average values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr kaufkraft --mode arealWeightingRelative
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr income --mode arealWeightingRelative
 ```
 
 ###&nbsp;  2. Attribute Weighting
@@ -62,7 +62,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 &nbsp;&nbsp;&nbsp; for **relative & average values:** <br>
 &nbsp;&nbsp;&nbsp; (e.g. *20 % of all voters*, *32.000 € average income*, ...)
 ```
-$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr kaufkraft --weight population --mode attributeWeightingRelative
+$ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data/targetfeatures_hierarchical.geojson -o output.geojson --attr income --weight population --mode attributeWeightingRelative
 ```
 
 ###&nbsp;  3. Binary Dasymetric Weighting
@@ -82,7 +82,7 @@ $ cogran -d -i test/data/base_data/sourcefeatures.geojson -t test/data/base_data
 ```
 
 ###&nbsp;  4. N-Class Dasymetric Weighting
-&nbsp; additional control zones classified by n classes (e.g. land use) are used to weight the attribute value by its percentage values  
+&nbsp; additional control zones with percentage values of an attribute (e.g. population share) are used to weight the input attribute
 &nbsp; within the control zones<br>
 &nbsp; ![NClassDasymetricWeighting](http://i.imgur.com/nVlN8a9.png)
 
