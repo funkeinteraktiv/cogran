@@ -2,7 +2,7 @@
 
 CoGran - A command line tool for **co**mbining data of different spatial **gran**ularity
 
-CoGran allows a spatial re-organization of geodata containing quantitative (statistical) information due to the fact that this is often not given for identical spatial units (like postal code districts, wards, or urban districts). Based on five different methods correlations between e.g. election results and income can be visualized. Recommendations for choosing the most suitable method for your data sets will follow.
+CoGran allows a spatial re-organization of geodata containing quantitative (statistical) information due to the fact that this is often not given in identical spatial units (like postal code districts, wards, or urban districts). Based on five different methods correlations between e.g. election results and income can be visualized. Recommendations for choosing the most suitable method for your data sets will follow.
 ![CoGran](http://i.imgur.com/PY9bfpI.png)
 
 **Note: Project is still under development.**
