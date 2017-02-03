@@ -30,6 +30,7 @@ npm link
 
 ## Usage Examples
 
+**For Windows Users: use ***node index.js*** instead of ***cogran*** as a prefix**
 
 **Note: Only use GeoJSON files with WGS84 (EPSG: 4326) as coordinate system**
 
