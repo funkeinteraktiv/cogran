@@ -35,7 +35,7 @@ npm link
 **Note: Only use GeoJSON files with WGS84 (EPSG: 4326) as coordinate system**
 
 
-#### 1. Simple Area Weighting  
+### 1. Simple Area Weighting  
 &nbsp; weights the attribute value by the area of intersection between source and target file <br> <br>
 ![SimpleAreaWeighting](http://i.imgur.com/aZevDoT.png)
 
@@ -57,7 +57,7 @@ cogran -d -i path/input.geojson -t path/target.geojson -o path/output.geojson --
 cogran -d -i testdata/hamburg/wohnflaecheProEW_Stadtteile.geojson -t testdata/hamburg/7_bezirke.geojson -o testdata/hamburg/arealWeightingRelative_wohnflaeche_stadtteileToBezirke.geojson --attr WFl_m2 --mode arealWeightingRelative
 ```
 
-###&nbsp;  2. Attribute Weighting  
+### 2. Attribute Weighting  
 &nbsp; weights the attribute value by an additional attribute of the target file (e.g. population) <br>
 &nbsp; ![AttributeWeighting](http://i.imgur.com/v4xjVJG.png)
 
@@ -79,7 +79,7 @@ cogran -d -i path/input.geojson -t path/target.geojson -o path/output.geojson --
 cogran -d -i testdata/hamburg/wohnflaecheProEW_Stadtteile.geojson -t testdata/hamburg/einwohner_bezirke.geojson -o testdata/hamburg/attributeWeightingRelative_wohnflaeche_stadtteileToBezirke.geojson --attr WFl_m2 --weight Insgesamt --mode attributeWeightingRelative
 ```
 
-###&nbsp;  3. Binary Dasymetric Weighting  
+### 3. Binary Dasymetric Weighting  
 &nbsp; additional control zones are used to mask out areas. Polygons (e.g. inhabited areas) get binary value [1]<br>
 &nbsp; ![BinaryDasymetricWeighting](http://i.imgur.com/JWXB7Pf.png)
 
@@ -101,7 +101,7 @@ cogran -d -i path/input.geojson -t path/target.geojson -o path/output.geojson --
 cogran -d -i testdata/hamburg/wohnflaecheProEW_Stadtteile.geojson -t testdata/hamburg/7_bezirke.geojson -o testdata/hamburg/binaryDasymetricWeightingRelative_wohnflaeche_stadtteileToBezirke.geojson --attr WFl_m2 --mask testdata/hamburg/bebauteFlaeche.geojson --mode binaryDasymetricWeightingRelative
 ```
 
-###&nbsp;  4. N-Class Dasymetric Weighting  
+### 4. N-Class Dasymetric Weighting  
 &nbsp; additional control zones with percentage values of an attribute (e.g. share of the population) are used to weight the input attribute<br>
 &nbsp; ![NClassDasymetricWeighting](http://i.imgur.com/MEgaFuX.png)
 
@@ -125,7 +125,7 @@ cogran -d -i path/input.geojson -t path/target.geojson -o path/output.geojson --
 cogran -d -i testdata/hamburg/wohnflaecheProEW_Stadtteile.geojson -t testdata/hamburg/7_bezirke.geojson -o testdata/hamburg/nClassDasymetricWeightingRelative_wohnflaeche_stadtteileToBezirke.geojson --attr WFl_m2 --mask testdata/hamburg/einwohner_statistischeGebiete.geojson --mode nClassDasymetricWeightingRelative
 ```
 
-###&nbsp;  5. Linear Regression
+### 5. Linear Regression
 &nbsp; a linear correlation between an independent variable (e.g. area size) and a dependent variable (the attribute value) is used to estimate the attribute value<br>
 &nbsp; ![LinearRegression](http://i.imgur.com/eeE66BU.png)
 
