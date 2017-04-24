@@ -35,7 +35,7 @@ npm link
 **Note: Only use GeoJSON files with WGS84 (EPSG: 4326) as coordinate system**
 
 
-###&nbsp;  1. Simple Area Weighting  
+###&nbsp;1. Simple Area Weighting  
 &nbsp; weights the attribute value by the area of intersection between source and target file <br> <br>
 ![SimpleAreaWeighting](http://i.imgur.com/aZevDoT.png)
 
