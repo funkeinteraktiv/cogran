@@ -83,7 +83,7 @@ cogran -d -i testdata/hamburg/wohnflaecheProEW_Stadtteile.geojson -t testdata/ha
 &nbsp; additional control zones are used to mask out areas. Polygons (e.g. inhabited areas) get binary value [1]<br>
 &nbsp; ![BinaryDasymetricWeighting](http://i.imgur.com/JWXB7Pf.png)
 
-&nbsp; **Note: polygons of mask have to be listed in a single dataset of a multipart polygon**
+&nbsp; **Note: polygons of mask have to be listed in a single dataset of a multipart polygon - dissolve as needed beforehand**
 
 &nbsp;&nbsp;&nbsp; **for absolute values:** <br>
 ```
